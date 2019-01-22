@@ -1,4 +1,10 @@
 language: node_js
-node_js: "10"
+node_js: "lts/dubnium"
 script:
   - npm run build
+deploy:
+  provider: firebase
+  token:
+    secure: QDEGITlSqi818gzYPcdxTkcu0byBwbJdaW/JKGcuUiMsrb9kpYRjQHHXUDLEiy9bBFUq5SIS54bvfykiP9Ba42rn7Mrf9VxXeUV5LgRVGSWFpnrI+3dsqT3CCTAyrHqUGZ5IRrhvj/tFg4B8q/i+0e8wnwqGS4B9JqaJZf23AVeLtfGpwZEMet3ixod3l9iu+qlFciDAEJwg8grMI/vw4sAzieDlwSqsGfp+Tv2fDTWGzVBG8NCr/29AV3gDHkIQcJNo+dH/44+nB/B67ZbqRSB1M0a6JtJbh6fH6XYPTzp94OgFJmJvUGu5t2gJNOObV/aGA3k7/f7MNzKCRgPou1RfqGJdRGV7YnEZRUaEdCtzLEpEfCa559jT+PnhwdEi1LJlU6csL//FJscM3jG9kRdFmGlYz3uZk3AOwkmc2R2ct30S4WRSBvLGyTh5FZMkTQKxi1kEN/fMErmiTm+IKQ9PiiKolXCwN3SL/Ht4IfHmj3xZl8DijdPJGmFO/VZNjVPymEgo85FWqxZMw6x2wgr81Ku6HbuuYtuvUpuWEpWN+Djf0o7OmP/c52w4G588zZxYo2SKzUcDHKUTYnQT68h4tzZt2SKoijZAWlCW8Y2bqGd/YgG8aWcNMc01Li/bn5em1wQl1um6gfOTXP+eU9DWHXA4F569kI0Gdp3wUCM=
+  message: "Deployed from travis."
+  project: coreofscience
