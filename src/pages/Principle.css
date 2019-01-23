@@ -13,6 +13,10 @@
   flex-direction: row-reverse;
 }
 
+.Principle:nth-child(2n) .Principle-details {
+  margin-right: 2em;
+}
+
 @media (max-width: 500px) {
   .Principle {
     flex-direction: column;
