@@ -1,20 +1,27 @@
 body {
-  margin: 0;
-  padding: 0;
-}
-
-.UnderConstruction {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  font-size: 14pt;
+  margin: 0;
+  padding: 0;
+  color: darkslategray;
 }
 
-.UnderConstruction-logo {
-  width: 12em;
-  height: auto;
+.Landing-container {
+  max-width: 960px;
+  padding: 1em;
+  margin: auto;
+}
+
+.Landing-header,
+.Landing-footer {
+  color: whitesmoke;
+  background-color: rgb(7, 7, 118);
+}
+
+.Landing-header {
+  height: 25vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
 }

@@ -1,0 +1,26 @@
+.Principle {
+  display: flex;
+  margin: 3em 0;
+}
+
+.Principle-logo {
+  height: 10em;
+  width: 10em;
+  margin-right: 2em;
+}
+
+.Principle:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 500px) {
+  .Principle {
+    flex-direction: column;
+  }
+  .Principle-logo {
+    width: 75%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 1em;
+  }
+}
