@@ -9,7 +9,7 @@ const UnderConstruction = () => (
       alt="Core of science"
     />
     <h1>Core of Science</h1>
-    <p>Under construction.</p>
+    <p>Coming soon...</p>
   </div>
 );
 
