@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "coreofscience.org",
   "private": true,
   "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
@@ -12,7 +12,7 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "dependencies": {
-    "gatsby": "^2.0.91",
+    "gatsby": "^2.2.9",
     "gatsby-plugin-manifest": "^2.0.13",
     "normalize.css": "^8.0.1",
     "react": "^16.5.1",
