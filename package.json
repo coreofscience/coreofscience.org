@@ -12,11 +12,13 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
     "gatsby": "^2.2.9",
     "gatsby-plugin-manifest": "^2.0.13",
+    "next": "^8.0.4",
     "normalize.css": "^8.0.1",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "repository": {
     "type": "git",
