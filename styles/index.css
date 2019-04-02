@@ -1,0 +1,52 @@
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 14pt;
+  margin: 0;
+  padding: 0;
+  color: darkslategray;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Landing-container {
+  max-width: 760px;
+  padding: 1em;
+  margin: auto;
+}
+
+.Landing-header,
+.Landing-footer {
+  color: whitesmoke;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#05041f+0,111075+59,111075+59 */
+  background: #05041f; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #05041f 0%, #111075 59%, #111075 59%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #05041f 0%,#111075 59%,#111075 59%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #05041f 0%,#111075 59%,#111075 59%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05041f', endColorstr='#111075',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.Landing-header {
+  height: 25vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.Landing-external-link {
+  text-decoration: none;
+  font-size: 80%;
+  color: whitesmoke;
+}
+
+.Landing-copyright-notice {
+  margin-top: 3em;
+  color: gray;
+}
