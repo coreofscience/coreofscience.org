@@ -5,16 +5,12 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "npm run develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "dev": "next dev",
+    "start": "next",
+    "build": "next build"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
-    "gatsby": "^2.2.9",
-    "gatsby-plugin-manifest": "^2.0.13",
     "next": "^8.0.4",
     "normalize.css": "^8.0.1",
     "react": "^16.8.6",
@@ -22,9 +18,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/coreofscience/coreofscience.org"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/coreofscience/coreofscience.org/issues"
   }
 }
