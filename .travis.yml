@@ -2,7 +2,7 @@ language: node_js
 node_js: "lts/dubnium"
 cache: npm
 script:
-  - npm run build
+  - npm run predeploy
 deploy:
   - provider: firebase
     token:
