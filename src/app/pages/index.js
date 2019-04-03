@@ -1,7 +1,4 @@
 import React from "react";
-import "normalize.css/normalize.css";
-import "./index.css";
-import "./Principle.css";
 
 const PRINCIPLES = [
   {
@@ -51,7 +48,11 @@ const Landing = () => (
       <div className="Landing-container">
         {PRINCIPLES.map(({ name, content }) => (
           <div className="Principle" key={name}>
-            <img className="Principle-logo" src="/images/logo.png" alt={name} />
+            <img
+              className="Principle-logo"
+              src="/static/images/logo.png"
+              alt={name}
+            />
             <div className="Principle-details">
               <h3 className="Principle-title">{name}</h3>
               <p>
