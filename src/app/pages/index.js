@@ -2,14 +2,6 @@ import React from "react";
 
 const PRINCIPLES = [
   {
-    name: "Mentoring",
-    content: `
-      As an organization, core of science wants to promote the development of
-      young students careers. That doesn't mean answering their questions but
-      giving them a glance as to what questions are there to ask.
-    `
-  },
-  {
     name: "Sharing knowledge",
     content: `
       We think knowledge becomes all the better when shared, that's why our
@@ -19,19 +11,21 @@ const PRINCIPLES = [
     `
   },
   {
-    name: "Building community",
+    name: "Creating science",
     content: `
-      One of the biggest challenges of our generation is to build communities.
-      In return, when part of a community, an individual can grasp knowledge,
-      and accommplish more than they could by acting as one.
+      Science is made by humans, their time, happiness and fullfillment is
+      very important to our organization. We want to develop tools that make
+      research easier, faster and more effective. And to do so, we need to
+      make science or core, front and center.
     `
   },
   {
-    name: "Developing software",
+    name: "Building thechnology",
     content: `
-      Core of science mantains a set of open source tools and some infraestructure.
-      We build, maintain and host these tools with the aim of making the day to
-      day life of students and researchers happier and productive.
+      Core of science mantains a set of open source tools and some
+      infraestructure. We build, maintain and host these tools with the aim
+      of making the day to day life of students and researchers happier and
+      productive.
     `
   }
 ];
