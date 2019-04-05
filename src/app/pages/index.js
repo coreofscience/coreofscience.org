@@ -13,7 +13,10 @@ const PRINCIPLES = [
   {
     name: "Creating science",
     content: `
-      Science is at the core of all we do.
+      Science is made by humans, their time, happiness and fullfillment is
+      very important to our organization. We want to develop tools that make
+      research easier, faster and more effective. And to do so, we need to
+      make science or core, front and center.
     `
   },
   {
