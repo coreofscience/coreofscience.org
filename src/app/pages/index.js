@@ -85,7 +85,7 @@ const Landing = () => (
                     cy="20"
                     r="20"
                     fill="#FFD8CD"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                   />
                 </svg>
               </div>
@@ -102,7 +102,7 @@ const Landing = () => (
                     cy="44"
                     r="44"
                     fill="#FFD2DA"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                   />
                 </svg>
               </div>
@@ -134,7 +134,7 @@ const Landing = () => (
                       height="88"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <g fill="none" fill-rule="nonzero">
+                      <g fill="none" fillRule="nonzero">
                         <path
                           d="M43 47v7a13 13 0 0 0 13-13v-7c-7.18 0-13 5.82-13 13z"
                           fill="#FF6381"
@@ -160,7 +160,7 @@ const Landing = () => (
                       height="88"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <g fill="none" fill-rule="nonzero">
+                      <g fill="none" fillRule="nonzero">
                         <path
                           d="M54 56h-9a2 2 0 0 1-2-2V43a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2zm-9-13v10h9V43h-9z"
                           fill="#FCAC96"
@@ -186,7 +186,7 @@ const Landing = () => (
                       height="88"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <g fill="none" fill-rule="nonzero">
+                      <g fill="none" fillRule="nonzero">
                         <circle fill="#1ADAB7" cx="38" cy="50" r="5" />
                         <path
                           d="M53 42h2v-8a1 1 0 0 0-1-1h-8v2h5.586l-8.293 8.293a1 1 0 1 0 1.414 1.414L53 36.414V42z"
@@ -226,8 +226,8 @@ const Landing = () => (
                 y2="100%"
                 id="testimonials-shape-1"
               >
-                <stop stop-color="#261FB6" offset="0%" />
-                <stop stop-color="#4950F6" offset="100%" />
+                <stop stopColor="#261FB6" offset="0%" />
+                <stop stopColor="#4950F6" offset="100%" />
               </linearGradient>
             </defs>
             <circle
@@ -236,7 +236,7 @@ const Landing = () => (
               r="140"
               transform="translate(0 -545)"
               fill="url(#testimonials-shape-1)"
-              fill-rule="evenodd"
+              fillRule="evenodd"
             />
           </svg>
         </div>
@@ -247,7 +247,7 @@ const Landing = () => (
             viewBox="0 0 125 107"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g fill="none" fill-rule="evenodd">
+            <g fill="none" fillRule="evenodd">
               <circle fill="#C6FDF3" cx="48" cy="59" r="48" />
               <path
                 d="M58.536 39.713c0-6.884 1.72-14.007 5.163-21.368 3.443-7.36 8.167-13.458 14.173-18.292l11.645 7.91c-3.589 4.98-6.262 10.016-8.02 15.106S78.86 33.598 78.86 39.384v13.623H58.536V39.713z"
@@ -275,8 +275,8 @@ const Landing = () => (
                 y2="85.765%"
                 id="testimonials-shape-3"
               >
-                <stop stop-color="#FF3058" offset="0%" />
-                <stop stop-color="#FF6381" offset="100%" />
+                <stop stopColor="#FF3058" offset="0%" />
+                <stop stopColor="#FF6381" offset="100%" />
               </linearGradient>
             </defs>
             <circle
@@ -285,7 +285,7 @@ const Landing = () => (
               r="24"
               transform="translate(0 -410)"
               fill="url(#testimonials-shape-3)"
-              fill-rule="evenodd"
+              fillRule="evenodd"
             />
           </svg>
         </div>
@@ -418,8 +418,8 @@ const Landing = () => (
                     y2="39.507%"
                     id="logo-footer-a"
                   >
-                    <stop stop-color="#8D92FA" offset="0%" />
-                    <stop stop-color="#8D92FA" stop-opacity="0" offset="100%" />
+                    <stop stopColor="#8D92FA" offset="0%" />
+                    <stop stopColor="#8D92FA" stopOpacity="0" offset="100%" />
                   </linearGradient>
                   <linearGradient
                     x1="93.05%"
@@ -428,8 +428,8 @@ const Landing = () => (
                     y2="85.765%"
                     id="logo-footer-b"
                   >
-                    <stop stop-color="#FF3058" offset="0%" />
-                    <stop stop-color="#FF6381" offset="100%" />
+                    <stop stopColor="#FF3058" offset="0%" />
+                    <stop stopColor="#FF6381" offset="100%" />
                   </linearGradient>
                   <linearGradient
                     x1="32.716%"
@@ -438,11 +438,11 @@ const Landing = () => (
                     y2="148.747%"
                     id="logo-footer-c"
                   >
-                    <stop stop-color="#FF97AA" offset="0%" />
-                    <stop stop-color="#FF97AA" stop-opacity="0" offset="100%" />
+                    <stop stopColor="#FF97AA" offset="0%" />
+                    <stop stopColor="#FF97AA" stopOpacity="0" offset="100%" />
                   </linearGradient>
                 </defs>
-                <g fill="none" fill-rule="evenodd">
+                <g fill="none" fillRule="evenodd">
                   <path
                     d="M31.12 7.482C28.327 19.146 19.147 28.326 7.483 31.121A12.04 12.04 0 0 1 .88 24.518C3.674 12.854 12.854 3.674 24.518.879a12.04 12.04 0 0 1 6.603 6.603z"
                     fill="#312ECA"
