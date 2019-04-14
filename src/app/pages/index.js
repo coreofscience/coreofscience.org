@@ -172,11 +172,10 @@ const Landing = () => (
                       </g>
                     </svg>
                   </div>
-                  <h4 class="feature-title h3-mobile mb-8">Powerful</h4>
-                  <p class="text-sm">
-                    A pseudo-Latin text used in web design, layout, and printing
-                    in place of English to emphasise design elements.
-                  </p>
+                  <h4 class="feature-title h3-mobile mb-8">
+                    {PRINCIPLES.science.name}
+                  </h4>
+                  <p class="text-sm">{PRINCIPLES.science.content}</p>
                 </div>
               </div>
               <div class="feature text-center is-revealing">
@@ -200,38 +199,10 @@ const Landing = () => (
                       </g>
                     </svg>
                   </div>
-                  <h4 class="feature-title h3-mobile mb-8">Powerful</h4>
-                  <p class="text-sm">
-                    A pseudo-Latin text used in web design, layout, and printing
-                    in place of English to emphasise design elements.
-                  </p>
-                </div>
-              </div>
-              <div class="feature text-center is-revealing">
-                <div class="feature-inner">
-                  <div class="feature-icon" style={{ background: "#E0E1FE" }}>
-                    <svg
-                      width="88"
-                      height="88"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g fill="none" fill-rule="nonzero">
-                        <path
-                          d="M41 42h-7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1zM41 55h-7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1z"
-                          fill="#4950F6"
-                        />
-                        <path
-                          fill="#8D92FA"
-                          d="M45 34h10v2H45zM45 39h10v2H45zM45 47h10v2H45zM45 52h10v2H45z"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                  <h4 class="feature-title h3-mobile mb-8">Powerful</h4>
-                  <p class="text-sm">
-                    A pseudo-Latin text used in web design, layout, and printing
-                    in place of English to emphasise design elements.
-                  </p>
+                  <h4 class="feature-title h3-mobile mb-8">
+                    {PRINCIPLES.tech.name}
+                  </h4>
+                  <p class="text-sm">{PRINCIPLES.tech.content}</p>
                 </div>
               </div>
             </div>
