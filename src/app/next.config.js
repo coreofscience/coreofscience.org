@@ -1,4 +1,4 @@
-const withCss = require("@zeit/next-css");
-module.exports = withCss({
+const withSass = require("@zeit/next-sass");
+module.exports = withSass({
   distDir: "../../dist/functions/next"
 });
