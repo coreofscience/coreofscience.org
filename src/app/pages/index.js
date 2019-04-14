@@ -66,7 +66,7 @@ const Landing = () => (
           height="128"
           viewBox="0 0 128 128"
           xmlns="http://www.w3.org/2000/svg"
-          style="overflow:visible"
+          style={{ overflow: "visible" }}
         >
           <defs>
             <linearGradient
@@ -197,7 +197,7 @@ const Landing = () => (
                   width="40"
                   height="40"
                   xmlns="http://www.w3.org/2000/svg"
-                  style="overflow:visible"
+                  style={{ overflow: "visible" }}
                 >
                   <circle
                     class="anime-element fadeup-animation"
@@ -214,7 +214,7 @@ const Landing = () => (
                   width="88"
                   height="88"
                   xmlns="http://www.w3.org/2000/svg"
-                  style="overflow:visible"
+                  style={{ overflow: "visible" }}
                 >
                   <circle
                     class="anime-element fadeup-animation"
@@ -232,7 +232,7 @@ const Landing = () => (
                   height="647"
                   viewBox="0 0 940 647"
                   xmlns="http://www.w3.org/2000/svg"
-                  style="overflow:visible"
+                  style={{ overflow: "visible" }}
                 >
                   <defs>
                     <linearGradient
@@ -519,9 +519,7 @@ const Landing = () => (
                           filter="url(#hero-illustration-d)"
                           d="M32 410h736v64H32z"
                         />
-                        <use
-                          fill="url(#hero-illustration-f)"
-                        />
+                        <use fill="url(#hero-illustration-f)" />
                       </g>
                       <g transform="translate(123 87)">
                         <circle fill="#D2DAF0" cx="4" cy="4" r="4" />
@@ -622,10 +620,7 @@ const Landing = () => (
                     </g>
                     <g class="anime-element fadeleft-animation">
                       <g transform="translate(56 157)">
-                        <use
-                          fill="#000"
-                          filter="url(#hero-illustration-i)"
-                        />
+                        <use fill="#000" filter="url(#hero-illustration-i)" />
                         <path
                           fill="#EEF1FA"
                           d="M0 191h308v1H0zM28 44h252v1H28z"
@@ -663,11 +658,8 @@ const Landing = () => (
                           rx="2"
                         />
                         <g transform="translate(28 232)">
-                          <mask id="hero-illustration-l" fill="#fff">
-                          </mask>
-                          <use
-                            fill="#ABABC9"
-                          />
+                          <mask id="hero-illustration-l" fill="#fff" />
+                          <use fill="#ABABC9" />
                           <image
                             mask="url(#hero-illustration-l)"
                             x="-2"
@@ -689,10 +681,7 @@ const Landing = () => (
                     <g>
                       <g class="anime-element fadeleft-animation">
                         <g transform="translate(164 483)">
-                          <use
-                            fill="#000"
-                            filter="url(#hero-illustration-q)"
-                          />
+                          <use fill="#000" filter="url(#hero-illustration-q)" />
                         </g>
                         <path
                           d="M200 506c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4 0 1.6 1.1 2.9 2.6 3.2-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4h-.8c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4c.7-.5 1.3-1.1 1.7-1.8z"
@@ -702,10 +691,7 @@ const Landing = () => (
                       </g>
                       <g class="anime-element fadeleft-animation">
                         <g transform="translate(251 390)">
-                          <use
-                            fill="#000"
-                            filter="url(#hero-illustration-s)"
-                          />
+                          <use fill="#000" filter="url(#hero-illustration-s)" />
                         </g>
                         <g fill-rule="nonzero">
                           <path
@@ -744,10 +730,7 @@ const Landing = () => (
                       </g>
                       <g class="anime-element fadeleft-animation">
                         <g transform="translate(28 221)">
-                          <use
-                            fill="#000"
-                            filter="url(#hero-illustration-u)"
-                          />
+                          <use fill="#000" filter="url(#hero-illustration-u)" />
                         </g>
                         <text
                           font-family="AppleColorEmoji, Apple Color Emoji"
@@ -762,10 +745,7 @@ const Landing = () => (
                       </g>
                       <g class="anime-element fadeleft-animation">
                         <g transform="translate(325 257)">
-                          <use
-                            fill="#000"
-                            filter="url(#hero-illustration-w)"
-                          />
+                          <use fill="#000" filter="url(#hero-illustration-w)" />
                         </g>
                         <text
                           font-family="AppleColorEmoji, Apple Color Emoji"
@@ -802,7 +782,7 @@ const Landing = () => (
             <div class="features-wrap">
               <div class="feature text-center is-revealing">
                 <div class="feature-inner">
-                  <div class="feature-icon" style="background:#FFD2DA;">
+                  <div class="feature-icon" style={{ background: "#FFD2DA" }}>
                     <svg
                       width="88"
                       height="88"
@@ -829,7 +809,7 @@ const Landing = () => (
               </div>
               <div class="feature text-center is-revealing">
                 <div class="feature-inner">
-                  <div class="feature-icon" style="background:#FFD8CD;">
+                  <div class="feature-icon" style={{ background: "#FFD8CD" }}>
                     <svg
                       width="88"
                       height="88"
@@ -856,7 +836,7 @@ const Landing = () => (
               </div>
               <div class="feature text-center is-revealing">
                 <div class="feature-inner">
-                  <div class="feature-icon" style="background:#C6FDF3;">
+                  <div class="feature-icon" style={{ background: "#C6FDF3" }}>
                     <svg
                       width="88"
                       height="88"
@@ -884,7 +864,7 @@ const Landing = () => (
               </div>
               <div class="feature text-center is-revealing">
                 <div class="feature-inner">
-                  <div class="feature-icon" style="background:#E0E1FE;">
+                  <div class="feature-icon" style={{ background: "#E0E1FE" }}>
                     <svg
                       width="88"
                       height="88"
@@ -1003,7 +983,7 @@ const Landing = () => (
                     <div class="testimonial-header">
                       <img
                         class="mb-16"
-                        src="dist/images/testimonial-01.png"
+                        src="/people/testimonial-01.png"
                         alt="Testimonial"
                       />
                     </div>
