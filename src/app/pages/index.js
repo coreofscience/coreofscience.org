@@ -31,14 +31,14 @@ const PRINCIPLES = {
 };
 
 const Landing = () => (
-  <div class="body-wrap boxed-container">
-    <header class="site-header">
-      <div class="header-shape header-shape-1" />
-      <div class="header-shape header-shape-2" />
-      <div class="container">
-        <div class="site-header-inner">
-          <div class="brand header-brand">
-            <h1 class="m-0">
+  <div className="body-wrap boxed-container">
+    <header className="site-header">
+      <div className="header-shape header-shape-1" />
+      <div className="header-shape header-shape-2" />
+      <div className="container">
+        <div className="site-header-inner">
+          <div className="brand header-brand">
+            <h1 className="m-0">
               <a href="#" title="Core of Science">
                 <img style={{ height: "1em" }} src="static/images/logo.png" />
               </a>
@@ -49,30 +49,30 @@ const Landing = () => (
     </header>
 
     <main>
-      <section class="hero">
-        <div class="container">
-          <div class="hero-inner">
-            <div class="hero-copy">
-              <h1 class="hero-title mt-0">Core of science</h1>
-              <p class="hero-paragraph">Slogan core of science...</p>
-              <div class="hero-form field field-grouped">
-                <div class="control control-expanded">
+      <section className="hero">
+        <div className="container">
+          <div className="hero-inner">
+            <div className="hero-copy">
+              <h1 className="hero-title mt-0">Core of science</h1>
+              <p className="hero-paragraph">Slogan core of science...</p>
+              <div className="hero-form field field-grouped">
+                <div className="control control-expanded">
                   <input
-                    class="input"
+                    className="input"
                     type="email"
                     name="email"
                     placeholder="example@email.com"
                   />
                 </div>
-                <div class="control">
-                  <a class="button button-primary button-block" href="#">
+                <div className="control">
+                  <a className="button button-primary button-block" href="#">
                     Keep in touch
                   </a>
                 </div>
               </div>
             </div>
-            <div class="hero-illustration">
-              <div class="hero-shape hero-shape-1">
+            <div className="hero-illustration">
+              <div className="hero-shape hero-shape-1">
                 <svg
                   width="40"
                   height="40"
@@ -80,7 +80,7 @@ const Landing = () => (
                   style={{ overflow: "visible" }}
                 >
                   <circle
-                    class="anime-element fadeup-animation"
+                    className="anime-element fadeup-animation"
                     cx="20"
                     cy="20"
                     r="20"
@@ -89,7 +89,7 @@ const Landing = () => (
                   />
                 </svg>
               </div>
-              <div class="hero-shape hero-shape-2">
+              <div className="hero-shape hero-shape-2">
                 <svg
                   width="88"
                   height="88"
@@ -97,7 +97,7 @@ const Landing = () => (
                   style={{ overflow: "visible" }}
                 >
                   <circle
-                    class="anime-element fadeup-animation"
+                    className="anime-element fadeup-animation"
                     cx="44"
                     cy="44"
                     r="44"
@@ -106,7 +106,7 @@ const Landing = () => (
                   />
                 </svg>
               </div>
-              <div class="hero-main-shape">
+              <div className="hero-main-shape">
                 <img src="/static/images/logo.png" />
               </div>
             </div>
@@ -114,21 +114,24 @@ const Landing = () => (
         </div>
       </section>
 
-      <section class="features section">
-        <div class="container">
-          <div class="features-inner section-inner">
-            <div class="features-header text-center">
-              <div class="container-sm">
-                <h2 class="section-title mt-0">Meet Core of Science</h2>
-                <p class="section-paragraph">
+      <section className="features section">
+        <div className="container">
+          <div className="features-inner section-inner">
+            <div className="features-header text-center">
+              <div className="container-sm">
+                <h2 className="section-title mt-0">Meet Core of Science</h2>
+                <p className="section-paragraph">
                   An organization dedicated to science.
                 </p>
               </div>
             </div>
-            <div class="features-wrap">
-              <div class="feature text-center is-revealing">
-                <div class="feature-inner">
-                  <div class="feature-icon" style={{ background: "#FFD2DA" }}>
+            <div className="features-wrap">
+              <div className="feature text-center is-revealing">
+                <div className="feature-inner">
+                  <div
+                    className="feature-icon"
+                    style={{ background: "#FFD2DA" }}
+                  >
                     <svg
                       width="88"
                       height="88"
@@ -146,15 +149,18 @@ const Landing = () => (
                       </g>
                     </svg>
                   </div>
-                  <h4 class="feature-title h3-mobile mb-8">
+                  <h4 className="feature-title h3-mobile mb-8">
                     {PRINCIPLES.share.name}
                   </h4>
-                  <p class="text-sm">{PRINCIPLES.share.content}</p>
+                  <p className="text-sm">{PRINCIPLES.share.content}</p>
                 </div>
               </div>
-              <div class="feature text-center is-revealing">
-                <div class="feature-inner">
-                  <div class="feature-icon" style={{ background: "#FFD8CD" }}>
+              <div className="feature text-center is-revealing">
+                <div className="feature-inner">
+                  <div
+                    className="feature-icon"
+                    style={{ background: "#FFD8CD" }}
+                  >
                     <svg
                       width="88"
                       height="88"
@@ -172,15 +178,18 @@ const Landing = () => (
                       </g>
                     </svg>
                   </div>
-                  <h4 class="feature-title h3-mobile mb-8">
+                  <h4 className="feature-title h3-mobile mb-8">
                     {PRINCIPLES.science.name}
                   </h4>
-                  <p class="text-sm">{PRINCIPLES.science.content}</p>
+                  <p className="text-sm">{PRINCIPLES.science.content}</p>
                 </div>
               </div>
-              <div class="feature text-center is-revealing">
-                <div class="feature-inner">
-                  <div class="feature-icon" style={{ background: "#C6FDF3" }}>
+              <div className="feature text-center is-revealing">
+                <div className="feature-inner">
+                  <div
+                    className="feature-icon"
+                    style={{ background: "#C6FDF3" }}
+                  >
                     <svg
                       width="88"
                       height="88"
@@ -199,10 +208,10 @@ const Landing = () => (
                       </g>
                     </svg>
                   </div>
-                  <h4 class="feature-title h3-mobile mb-8">
+                  <h4 className="feature-title h3-mobile mb-8">
                     {PRINCIPLES.tech.name}
                   </h4>
-                  <p class="text-sm">{PRINCIPLES.tech.content}</p>
+                  <p className="text-sm">{PRINCIPLES.tech.content}</p>
                 </div>
               </div>
             </div>
@@ -210,8 +219,8 @@ const Landing = () => (
         </div>
       </section>
 
-      <section class="testimonials section">
-        <div class="testimonials-shape testimonials-shape-1">
+      <section className="testimonials section">
+        <div className="testimonials-shape testimonials-shape-1">
           <svg
             width="280"
             height="280"
@@ -240,7 +249,7 @@ const Landing = () => (
             />
           </svg>
         </div>
-        <div class="testimonials-shape testimonials-shape-2">
+        <div className="testimonials-shape testimonials-shape-2">
           <svg
             width="125"
             height="107"
@@ -260,7 +269,7 @@ const Landing = () => (
             </g>
           </svg>
         </div>
-        <div class="testimonials-shape testimonials-shape-3">
+        <div className="testimonials-shape testimonials-shape-3">
           <svg
             width="48"
             height="48"
@@ -289,77 +298,77 @@ const Landing = () => (
             />
           </svg>
         </div>
-        <div class="container">
-          <div class="testimonials-inner section-inner">
-            <h2 class="section-title mt-0 text-center">Testimonials</h2>
-            <div class="testimonials-wrap">
-              <div class="testimonial text-xs is-revealing">
-                <div class="testimonial-inner">
-                  <div class="testimonial-main">
-                    <div class="testimonial-header">
+        <div className="container">
+          <div className="testimonials-inner section-inner">
+            <h2 className="section-title mt-0 text-center">Testimonials</h2>
+            <div className="testimonials-wrap">
+              <div className="testimonial text-xs is-revealing">
+                <div className="testimonial-inner">
+                  <div className="testimonial-main">
+                    <div className="testimonial-header">
                       <img
-                        class="mb-16"
+                        className="mb-16"
                         src="/static/people/testimonial-01.png"
                         alt="Testimonial"
                       />
                     </div>
-                    <div class="testimonial-body">
-                      <p class="mb-0">
+                    <div className="testimonial-body">
+                      <p className="mb-0">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt.
                       </p>
                     </div>
                   </div>
-                  <div class="testimonial-footer">
-                    <div class="testimonial-link">
+                  <div className="testimonial-footer">
+                    <div className="testimonial-link">
                       <a href="#">@martajones</a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="testimonial text-xs is-revealing">
-                <div class="testimonial-inner">
-                  <div class="testimonial-main">
-                    <div class="testimonial-header">
+              <div className="testimonial text-xs is-revealing">
+                <div className="testimonial-inner">
+                  <div className="testimonial-main">
+                    <div className="testimonial-header">
                       <img
-                        class="mb-16"
+                        className="mb-16"
                         src="/static/people/testimonial-02.png"
                         alt="Testimonial"
                       />
                     </div>
-                    <div class="testimonial-body">
-                      <p class="mb-0">
+                    <div className="testimonial-body">
+                      <p className="mb-0">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt.
                       </p>
                     </div>
                   </div>
-                  <div class="testimonial-footer">
-                    <div class="testimonial-link">
+                  <div className="testimonial-footer">
+                    <div className="testimonial-link">
                       <a href="#">@michealpahm</a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="testimonial text-xs is-revealing">
-                <div class="testimonial-inner">
-                  <div class="testimonial-main">
-                    <div class="testimonial-header">
+              <div className="testimonial text-xs is-revealing">
+                <div className="testimonial-inner">
+                  <div className="testimonial-main">
+                    <div className="testimonial-header">
                       <img
-                        class="mb-16"
+                        className="mb-16"
                         src="/static/people/testimonial-03.png"
                         alt="Testimonial"
                       />
                     </div>
-                    <div class="testimonial-body">
-                      <p class="mb-0">
+                    <div className="testimonial-body">
+                      <p className="mb-0">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt.
                       </p>
                     </div>
                   </div>
-                  <div class="testimonial-footer">
-                    <div class="testimonial-link">
+                  <div className="testimonial-footer">
+                    <div className="testimonial-link">
                       <a href="#">@markbrown</a>
                     </div>
                   </div>
@@ -370,28 +379,28 @@ const Landing = () => (
         </div>
       </section>
 
-      <section class="newsletter section text-light">
-        <div class="container-sm">
-          <div class="newsletter-inner section-inner">
-            <div class="newsletter-header text-center">
-              <h2 class="section-title mt-0">Stay in the know</h2>
-              <p class="section-paragraph">
+      <section className="newsletter section text-light">
+        <div className="container-sm">
+          <div className="newsletter-inner section-inner">
+            <div className="newsletter-header text-center">
+              <h2 className="section-title mt-0">Stay in the know</h2>
+              <p className="section-paragraph">
                 Lorem ipsum is common placeholder text used to demonstrate the
                 graphic elements of a document or visual presentation.
               </p>
             </div>
-            <div class="footer-form newsletter-form field field-grouped">
-              <div class="control control-expanded">
+            <div className="footer-form newsletter-form field field-grouped">
+              <div className="control control-expanded">
                 <input
-                  class="input"
+                  className="input"
                   type="email"
                   name="email"
                   placeholder="Your best email&hellip;"
                 />
               </div>
-              <div class="control">
+              <div className="control">
                 <a
-                  class="button button-primary button-block button-shadow"
+                  className="button button-primary button-block button-shadow"
                   href="#"
                 >
                   Early access
@@ -403,10 +412,10 @@ const Landing = () => (
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <div class="site-footer-inner has-top-divider">
-          <div class="brand footer-brand">
+    <footer className="site-footer">
+      <div className="container">
+        <div className="site-footer-inner has-top-divider">
+          <div className="brand footer-brand">
             <a href="#">
               <svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
                 <title>April</title>
@@ -465,7 +474,7 @@ const Landing = () => (
               </svg>
             </a>
           </div>
-          <ul class="footer-links list-reset">
+          <ul className="footer-links list-reset">
             <li>
               <a href="#">Contact</a>
             </li>
@@ -479,10 +488,10 @@ const Landing = () => (
               <a href="#">Support</a>
             </li>
           </ul>
-          <ul class="footer-social-links list-reset">
+          <ul className="footer-social-links list-reset">
             <li>
               <a href="#">
-                <span class="screen-reader-text">Facebook</span>
+                <span className="screen-reader-text">Facebook</span>
                 <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M6.023 16L6 9H3V6h3V4c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V6H13l-1 3H9.28v7H6.023z"
@@ -493,7 +502,7 @@ const Landing = () => (
             </li>
             <li>
               <a href="#">
-                <span class="screen-reader-text">Twitter</span>
+                <span className="screen-reader-text">Twitter</span>
                 <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z"
@@ -504,7 +513,7 @@ const Landing = () => (
             </li>
             <li>
               <a href="#">
-                <span class="screen-reader-text">Google</span>
+                <span className="screen-reader-text">Google</span>
                 <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M7.9 7v2.4H12c-.2 1-1.2 3-4 3-2.4 0-4.3-2-4.3-4.4 0-2.4 2-4.4 4.3-4.4 1.4 0 2.3.6 2.8 1.1l1.9-1.8C11.5 1.7 9.9 1 8 1 4.1 1 1 4.1 1 8s3.1 7 7 7c4 0 6.7-2.8 6.7-6.8 0-.5 0-.8-.1-1.2H7.9z"
@@ -514,7 +523,7 @@ const Landing = () => (
               </a>
             </li>
           </ul>
-          <div class="footer-copyright">
+          <div className="footer-copyright">
             &copy; 2018 April, all rights reserved
           </div>
         </div>
