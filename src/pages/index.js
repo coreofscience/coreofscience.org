@@ -1,4 +1,6 @@
-import React from "react";
+import React from "react"
+import "../styles/scss/style.scss";
+
 
 const PRINCIPLES = {
   share: {
@@ -30,6 +32,7 @@ const PRINCIPLES = {
   }
 };
 
+
 const Landing = () => (
   <div className="body-wrap boxed-container">
     <header className="site-header">
@@ -40,7 +43,7 @@ const Landing = () => (
           <div className="brand header-brand">
             <h1 className="m-0">
               <a href="#" title="Core of Science">
-                <img style={{ height: "1em" }} src="static/images/logo.png" />
+                <img style={{ height: "1em" }} src="images/logo.png" />
               </a>
             </h1>
           </div>
@@ -107,7 +110,7 @@ const Landing = () => (
                 </svg>
               </div>
               <div className="hero-main-shape">
-                <img src="/static/images/logo.png" />
+                <img src="images/logo.png" />
               </div>
             </div>
           </div>
@@ -308,7 +311,7 @@ const Landing = () => (
                     <div className="testimonial-header">
                       <img
                         className="mb-16"
-                        src="/static/people/testimonial-01.png"
+                        src="people/testimonial-01.png"
                         alt="Testimonial"
                       />
                     </div>
@@ -332,7 +335,7 @@ const Landing = () => (
                     <div className="testimonial-header">
                       <img
                         className="mb-16"
-                        src="/static/people/testimonial-02.png"
+                        src="people/testimonial-02.png"
                         alt="Testimonial"
                       />
                     </div>
@@ -356,7 +359,7 @@ const Landing = () => (
                     <div className="testimonial-header">
                       <img
                         className="mb-16"
-                        src="/static/people/testimonial-03.png"
+                        src="people/testimonial-03.png"
                         alt="Testimonial"
                       />
                     </div>
