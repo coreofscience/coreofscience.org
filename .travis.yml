@@ -1,6 +1,8 @@
 language: node_js
 node_js: "lts/dubnium"
 cache: npm
+before_script:
+  - npm install -g gatsby-cli
 script:
   - npm run-script build
 deploy:
