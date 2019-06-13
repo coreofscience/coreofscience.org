@@ -73,3 +73,9 @@ dist/
 .firebaserc
 .firebase/
 
+
+# public folder
+public
+
+# cache folder
+.cache
