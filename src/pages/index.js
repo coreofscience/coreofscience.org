@@ -42,10 +42,10 @@ const PEOPLE = {
     photo: "people/vivi.png"
   },
   sebas: {
-    name: "Sebastian Robledo",
+    name: "Sebastián Robledo",
     email: "sebastian@coreofscience.org",
     bio: `
-      Sebastian Robledo is an expert on business management, specialized on
+      Sebastián Robledo is an expert on business management, specialized on
       viral market adoption. He's particularly great at helping people
       fulfill their potential.
     `,
