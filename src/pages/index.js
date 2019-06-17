@@ -72,8 +72,12 @@ const Landing = () => (
         <div className="site-header-inner">
           <div className="brand header-brand">
             <h1 className="m-0">
-              <a href="#" title="Core of Science">
-                <img style={{ height: "1em" }} src="images/logo.png" />
+              <a href="/" title="Core of Science">
+                <img
+                  style={{ height: "1em" }}
+                  src="images/logo.png"
+                  alt="core of science logo"
+                />
               </a>
             </h1>
           </div>
@@ -98,9 +102,9 @@ const Landing = () => (
                   />
                 </div>
                 <div className="control">
-                  <a className="button button-primary button-block" href="#">
+                  <button className="button button-primary button-block">
                     Keep in touch
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -140,7 +144,7 @@ const Landing = () => (
                 </svg>
               </div>
               <div className="hero-main-shape">
-                <img src="images/logo.png" />
+                <img src="images/logo.png" alt="core of science main product" />
               </div>
             </div>
           </div>
@@ -386,12 +390,9 @@ const Landing = () => (
                 />
               </div>
               <div className="control">
-                <a
-                  className="button button-primary button-block button-shadow"
-                  href="#"
-                >
+                <button className="button button-primary button-block button-shadow">
                   Early access
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -403,27 +404,26 @@ const Landing = () => (
       <div className="container">
         <div className="site-footer-inner has-top-divider">
           <div className="brand footer-brand">
-            <a href="#">
-              <img width="32" height="32" src="images/logo.png"></img>
+            <a href="/">
+              <img
+                width="32"
+                height="32"
+                src="images/logo.png"
+                alt="core of science logo"
+              />
             </a>
           </div>
           <ul className="footer-links list-reset">
             <li>
-              <a href="#">Contact</a>
+              <a href="https://github.com/coreofscience">GitHub</a>
             </li>
             <li>
-              <a href="#">About us</a>
-            </li>
-            <li>
-              <a href="#">FAQ's</a>
-            </li>
-            <li>
-              <a href="#">Support</a>
+              <a href="https://tos-manizales.firebaseapp.com/">ToS</a>
             </li>
           </ul>
           <ul className="footer-social-links list-reset">
             <li>
-              <a href="#">
+              <a href="https://web.facebook.com/treeofscience1/">
                 <span className="screen-reader-text">Facebook</span>
                 <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -434,7 +434,7 @@ const Landing = () => (
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://twitter.com/ToS_Manizales">
                 <span className="screen-reader-text">Twitter</span>
                 <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -444,20 +444,9 @@ const Landing = () => (
                 </svg>
               </a>
             </li>
-            <li>
-              <a href="#">
-                <span className="screen-reader-text">Google</span>
-                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M7.9 7v2.4H12c-.2 1-1.2 3-4 3-2.4 0-4.3-2-4.3-4.4 0-2.4 2-4.4 4.3-4.4 1.4 0 2.3.6 2.8 1.1l1.9-1.8C11.5 1.7 9.9 1 8 1 4.1 1 1 4.1 1 8s3.1 7 7 7c4 0 6.7-2.8 6.7-6.8 0-.5 0-.8-.1-1.2H7.9z"
-                    fill="#FFF"
-                  />
-                </svg>
-              </a>
-            </li>
           </ul>
           <div className="footer-copyright">
-            &copy; 2018 April, all rights reserved
+            &copy; 2019 Core of Science, built using cruip.com/april
           </div>
         </div>
       </div>
