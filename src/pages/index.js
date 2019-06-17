@@ -1,6 +1,5 @@
-import React from "react"
+import React from "react";
 import "../styles/scss/style.scss";
-
 
 const PRINCIPLES = {
   share: {
@@ -32,6 +31,37 @@ const PRINCIPLES = {
   }
 };
 
+const PEOPLE = {
+  vivi: {
+    name: "Viviana Zuluaga",
+    email: "martha@coreofscience.org",
+    bio: `
+      Viviana Zuluaga is an expert on biology, specialized on metabolomics.
+      She's really good at bibliographic structured search.
+    `,
+    photo: "people/vivi.png"
+  },
+  sebas: {
+    name: "Sebastián Robledo",
+    email: "sebastian@coreofscience.org",
+    bio: `
+      Sebastián Robledo is an expert on business management, specialized on
+      viral market adoption. He's particularly great at helping people
+      fulfill their potential.
+    `,
+    photo: "people/sebas.png"
+  },
+  oscar: {
+    name: "Oscar Arbeláez",
+    email: "oscar@coreofscience.org",
+    bio: `
+      Oscar Arbeláez is an expert on physics, specialized on computational
+      science. On a good day he can write some lines of code and he's really
+      interested on software development team dynamics.
+    `,
+    photo: "people/oscar.png"
+  }
+};
 
 const Landing = () => (
   <div className="body-wrap boxed-container">
@@ -42,8 +72,12 @@ const Landing = () => (
         <div className="site-header-inner">
           <div className="brand header-brand">
             <h1 className="m-0">
-              <a href="#" title="Core of Science">
-                <img style={{ height: "1em" }} src="images/logo.png" />
+              <a href="/" title="Core of Science">
+                <img
+                  style={{ height: "1em" }}
+                  src="images/logo.png"
+                  alt="core of science logo"
+                />
               </a>
             </h1>
           </div>
@@ -68,9 +102,9 @@ const Landing = () => (
                   />
                 </div>
                 <div className="control">
-                  <a className="button button-primary button-block" href="#">
+                  <button className="button button-primary button-block">
                     Keep in touch
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -110,7 +144,7 @@ const Landing = () => (
                 </svg>
               </div>
               <div className="hero-main-shape">
-                <img src="images/logo.png" />
+                <img src="images/logo.png" alt="core of science main product" />
               </div>
             </div>
           </div>
@@ -303,80 +337,34 @@ const Landing = () => (
         </div>
         <div className="container">
           <div className="testimonials-inner section-inner">
-            <h2 className="section-title mt-0 text-center">Testimonials</h2>
+            <h2 className="section-title mt-0 text-center">People</h2>
             <div className="testimonials-wrap">
-              <div className="testimonial text-xs is-revealing">
-                <div className="testimonial-inner">
-                  <div className="testimonial-main">
-                    <div className="testimonial-header">
-                      <img
-                        className="mb-16"
-                        src="people/testimonial-01.png"
-                        alt="Testimonial"
-                      />
-                    </div>
-                    <div className="testimonial-body">
-                      <p className="mb-0">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="testimonial-footer">
-                    <div className="testimonial-link">
-                      <a href="#">@martajones</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="testimonial text-xs is-revealing">
-                <div className="testimonial-inner">
-                  <div className="testimonial-main">
-                    <div className="testimonial-header">
-                      <img
-                        className="mb-16"
-                        src="people/testimonial-02.png"
-                        alt="Testimonial"
-                      />
-                    </div>
-                    <div className="testimonial-body">
-                      <p className="mb-0">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt.
-                      </p>
+              {Object.keys(PEOPLE).map(nick => {
+                const person = PEOPLE[nick];
+                return (
+                  <div key={nick} className="testimonial text-xs is-revealing">
+                    <div className="testimonial-inner">
+                      <div className="testimonial-main">
+                        <div className="testimonial-header">
+                          <img
+                            className="mb-16"
+                            src={person.photo}
+                            alt="Testimonial"
+                          />
+                        </div>
+                        <div className="testimonial-body">
+                          <p className="mb-0">{person.bio}</p>
+                        </div>
+                      </div>
+                      <div className="testimonial-footer">
+                        <div className="testimonial-link">
+                          <a href={`mailto:${person.email}`}>{person.email}</a>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div className="testimonial-footer">
-                    <div className="testimonial-link">
-                      <a href="#">@michealpahm</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="testimonial text-xs is-revealing">
-                <div className="testimonial-inner">
-                  <div className="testimonial-main">
-                    <div className="testimonial-header">
-                      <img
-                        className="mb-16"
-                        src="people/testimonial-03.png"
-                        alt="Testimonial"
-                      />
-                    </div>
-                    <div className="testimonial-body">
-                      <p className="mb-0">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="testimonial-footer">
-                    <div className="testimonial-link">
-                      <a href="#">@markbrown</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -402,12 +390,9 @@ const Landing = () => (
                 />
               </div>
               <div className="control">
-                <a
-                  className="button button-primary button-block button-shadow"
-                  href="#"
-                >
+                <button className="button button-primary button-block button-shadow">
                   Early access
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -419,81 +404,26 @@ const Landing = () => (
       <div className="container">
         <div className="site-footer-inner has-top-divider">
           <div className="brand footer-brand">
-            <a href="#">
-              <svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
-                <title>April</title>
-                <defs>
-                  <linearGradient
-                    x1="114.674%"
-                    y1="39.507%"
-                    x2="-52.998%"
-                    y2="39.507%"
-                    id="logo-footer-a"
-                  >
-                    <stop stopColor="#8D92FA" offset="0%" />
-                    <stop stopColor="#8D92FA" stopOpacity="0" offset="100%" />
-                  </linearGradient>
-                  <linearGradient
-                    x1="93.05%"
-                    y1="19.767%"
-                    x2="15.034%"
-                    y2="85.765%"
-                    id="logo-footer-b"
-                  >
-                    <stop stopColor="#FF3058" offset="0%" />
-                    <stop stopColor="#FF6381" offset="100%" />
-                  </linearGradient>
-                  <linearGradient
-                    x1="32.716%"
-                    y1="-20.176%"
-                    x2="32.716%"
-                    y2="148.747%"
-                    id="logo-footer-c"
-                  >
-                    <stop stopColor="#FF97AA" offset="0%" />
-                    <stop stopColor="#FF97AA" stopOpacity="0" offset="100%" />
-                  </linearGradient>
-                </defs>
-                <g fill="none" fillRule="evenodd">
-                  <path
-                    d="M31.12 7.482C28.327 19.146 19.147 28.326 7.483 31.121A12.04 12.04 0 0 1 .88 24.518C3.674 12.854 12.854 3.674 24.518.879a12.04 12.04 0 0 1 6.603 6.603z"
-                    fill="#312ECA"
-                  />
-                  <path
-                    d="M28.874 3.922l-24.91 24.99a12.026 12.026 0 0 1-3.085-4.394C3.674 12.854 12.854 3.674 24.518.879a12.025 12.025 0 0 1 4.356 3.043z"
-                    fill="url(#logo-footer-a)"
-                  />
-                  <g opacity=".88">
-                    <path
-                      d="M31.12 24.518a12.04 12.04 0 0 1-6.602 6.603C12.854 28.326 3.674 19.146.879 7.482A12.04 12.04 0 0 1 7.482.88c11.664 2.795 20.844 11.975 23.639 23.639z"
-                      fill="url(#logo-footer-b)"
-                    />
-                    <path
-                      d="M24.518 31.12C12.854 28.327 3.674 19.147.879 7.483A12.015 12.015 0 0 1 3.46 3.57L28.47 28.5a12.016 12.016 0 0 1-3.951 2.62z"
-                      fill="url(#logo-footer-c)"
-                    />
-                  </g>
-                </g>
-              </svg>
+            <a href="/">
+              <img
+                width="32"
+                height="32"
+                src="images/logo.png"
+                alt="core of science logo"
+              />
             </a>
           </div>
           <ul className="footer-links list-reset">
             <li>
-              <a href="#">Contact</a>
+              <a href="https://github.com/coreofscience">GitHub</a>
             </li>
             <li>
-              <a href="#">About us</a>
-            </li>
-            <li>
-              <a href="#">FAQ's</a>
-            </li>
-            <li>
-              <a href="#">Support</a>
+              <a href="https://tos-manizales.firebaseapp.com/">ToS</a>
             </li>
           </ul>
           <ul className="footer-social-links list-reset">
             <li>
-              <a href="#">
+              <a href="https://web.facebook.com/treeofscience1/">
                 <span className="screen-reader-text">Facebook</span>
                 <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -504,7 +434,7 @@ const Landing = () => (
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://twitter.com/ToS_Manizales">
                 <span className="screen-reader-text">Twitter</span>
                 <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -514,20 +444,9 @@ const Landing = () => (
                 </svg>
               </a>
             </li>
-            <li>
-              <a href="#">
-                <span className="screen-reader-text">Google</span>
-                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M7.9 7v2.4H12c-.2 1-1.2 3-4 3-2.4 0-4.3-2-4.3-4.4 0-2.4 2-4.4 4.3-4.4 1.4 0 2.3.6 2.8 1.1l1.9-1.8C11.5 1.7 9.9 1 8 1 4.1 1 1 4.1 1 8s3.1 7 7 7c4 0 6.7-2.8 6.7-6.8 0-.5 0-.8-.1-1.2H7.9z"
-                    fill="#FFF"
-                  />
-                </svg>
-              </a>
-            </li>
           </ul>
           <div className="footer-copyright">
-            &copy; 2018 April, all rights reserved
+            &copy; 2019 Core of Science, built using cruip.com/april
           </div>
         </div>
       </div>
