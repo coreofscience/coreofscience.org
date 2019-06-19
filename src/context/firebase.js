@@ -10,8 +10,8 @@ const FirebaseContext = createContext(null);
 
 const FirebaseProvider = ({ children }) => {
   const [state, setState] = useState({
-    firebase: null,
-    database: null,
+    app: null,
+    firestore: null,
     ready: false
   });
   useEffect(() => {
@@ -22,8 +22,8 @@ const FirebaseProvider = ({ children }) => {
       })
       .then(() =>
         setState({
-          firebase: firebase,
-          database: firebase.firestore(),
+          app: firebase,
+          firestore: firebase.firestore(),
           ready: true
         })
       );
