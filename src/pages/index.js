@@ -1,6 +1,7 @@
 import React from "react";
 import { FirebaseProvider } from "../context/firebase";
 import "../styles/scss/style.scss";
+import EmailForm from "../components/email";
 
 const PRINCIPLES = {
   share: {
@@ -94,21 +95,7 @@ const Landing = () => (
               <div className="hero-copy">
                 <h1 className="hero-title mt-0">Core of science</h1>
                 <p className="hero-paragraph">Slogan core of science...</p>
-                <div className="hero-form field field-grouped">
-                  <div className="control control-expanded">
-                    <input
-                      className="input"
-                      type="email"
-                      name="email"
-                      placeholder="example@email.com"
-                    />
-                  </div>
-                  <div className="control">
-                    <button className="button button-primary button-block">
-                      Keep in touch
-                    </button>
-                  </div>
-                </div>
+                <EmailForm className="hero-form field field-grouped" />
               </div>
               <div className="hero-illustration">
                 <div className="hero-shape hero-shape-1">
@@ -390,21 +377,7 @@ const Landing = () => (
                   graphic elements of a document or visual presentation.
                 </p>
               </div>
-              <div className="footer-form newsletter-form field field-grouped">
-                <div className="control control-expanded">
-                  <input
-                    className="input"
-                    type="email"
-                    name="email"
-                    placeholder="Your best email&hellip;"
-                  />
-                </div>
-                <div className="control">
-                  <button className="button button-primary button-block button-shadow">
-                    Early access
-                  </button>
-                </div>
-              </div>
+              <EmailForm className="footer-form newsletter-form field field-grouped" />
             </div>
           </div>
         </section>
