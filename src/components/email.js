@@ -3,11 +3,12 @@ import PropTypes from "prop-types";
 import FirebaseContext from "../context/firebase";
 
 const EmailForm = ({ className }) => {
-  const [email, setEmail] = useState();
+  const [email, setEmail] = useState("");
   const firebase = useContext(FirebaseContext);
   const storeEmail = () => {
     if (!firebase.ready) return;
-    firebase.firestore
+    firebase.app
+      .firestore()
       .collection("emails")
       .add({ email, timestamp: new Date() })
       .then(() => setEmail(""));
