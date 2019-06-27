@@ -36,6 +36,11 @@
         background-color: color(bg, 2);
         border-color: color(bg, 2);
     }
+
+    &.error {
+        border-color: color(secondary, 3);
+        color: color(secondary, 1);
+    }
 }
 
 .input {

@@ -17,8 +17,6 @@ const FirebaseProvider = ({ children }) => {
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (process.env.NODE_ENV === "development") {
-      console.log("***", process.env.GATSBY_FIREBASE_PROJECT_ID);
-      console.log("***", process.env.GATSBY_FIREBASE_API_KEY);
       const firebaseConfig = {
         apiKey: process.env.GATSBY_FIREBASE_API_KEY,
         authDomain: process.env.GATSBY_FIREBASE_AUTH_DOMAIN,
