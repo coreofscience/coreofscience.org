@@ -15,7 +15,7 @@ deploy:
     skip_cleanup: true
     on:
       branch: master
-      repo: coreofscience/coreofscience.org
+      repo: coreofscience/coreofscience.com
   - provider: firebase
     token:
       secure: "KTScgbvoz740NGh4yhk4d6crfOYTBgfssPZcNJQvSrgZyUm0ejVsEaEw41nwOyxyICDIPlt1Nci9s3yHA+mlZ09w3KC9GgOkfKvs1xUBeuS0mjkWlI9xu+lwoecEzFmqaPZCNVkC7inETKhQHfyP8vWt3an/yx3+ja0e3Siq752Gkvb64t5s4amAD4C3RIXWup6PR334fcSRC+KV8Hlfyp0Ucs4KBHvXKVllkW+fk3vbPSQ8ZP1d0XCMsaNEGFenza/VDRaT5769VrLiI6v+tZzwsvY2CfIyGIyMqoAwEoayCzl4S87rhhEtj9bJ2CPCzVRTNDH1va+7Nl94/JHWSxDC5+lx7OdMZA8sJ7EVarRZYKaFhyQulp/bN0bKmWXXj872DTdJPoGHP4bBb6pLKzatd8QYfbi1NgTFuR/rwsZEkMCJ6iKsWdh994TVr2Vu340VDzU5GVrVZSgw59HTn4mELVm9Q5ROj1UneJPKQF17+8uv3OgBZW9SCU44AfOCMrBI8ZAMZXDgCWwCVRtTiZV6ND1USnXzXyBz74nKkTSDmJkkYUI83LT1lclimErXDCOOQJK3IyGkfyJlrUZypklLLdvtYagxjcScfgHCWFMme2NBu2K6tzDER8MvPJU46LCdaTTwKKPtAmY7OPqBQGEzS7o+wo6n++1j8TTjwlc="
@@ -25,4 +25,4 @@ deploy:
     on:
       tags: true
       branch: master
-      repo: coreofscience/coreofscience.org
+      repo: coreofscience/coreofscience.com
