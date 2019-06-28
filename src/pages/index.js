@@ -25,7 +25,7 @@ const PRINCIPLES = {
   tech: {
     name: "Building thechnology",
     content: `
-      Core of science mantains a set of open source tools and some
+      Core of Science mantains a set of open source tools and some
       infraestructure. We build, maintain and host these tools with the aim
       of making the day to day life of students and researchers happier and
       productive.
@@ -94,7 +94,9 @@ const Landing = () => (
             <div className="hero-inner">
               <div className="hero-copy">
                 <h1 className="hero-title mt-0">Core of science</h1>
-                <p className="hero-paragraph">Slogan core of science...</p>
+                <p className="hero-paragraph">
+                  Connecting people through knowledge.
+                </p>
                 <EmailForm className="hero-form field field-grouped" />
               </div>
               <div className="hero-illustration">
@@ -371,10 +373,10 @@ const Landing = () => (
           <div className="container-sm">
             <div className="newsletter-inner section-inner">
               <div className="newsletter-header text-center">
-                <h2 className="section-title mt-0">Stay in the know</h2>
+                <h2 className="section-title mt-0">Keep in touch</h2>
                 <p className="section-paragraph">
-                  Lorem ipsum is common placeholder text used to demonstrate the
-                  graphic elements of a document or visual presentation.
+                  We will send you an email when new tools are available, you
+                  will also get invitations to be an early tester of them.
                 </p>
               </div>
               <EmailForm className="footer-form newsletter-form field field-grouped" />
