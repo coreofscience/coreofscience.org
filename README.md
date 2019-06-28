@@ -1,4 +1,4 @@
-# Core of science website
+# Core of Science website
 
 [![Build Status](https://travis-ci.org/coreofscience/coreofscience.org.svg?branch=master)](https://travis-ci.org/coreofscience/coreofscience.org)
 
