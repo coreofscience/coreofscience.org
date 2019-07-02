@@ -2,6 +2,7 @@ import React from "react";
 import { FirebaseProvider } from "../context/firebase";
 import "../styles/scss/style.scss";
 import EmailForm from "../components/email";
+import Image from "../components/Image";
 
 const PRINCIPLES = {
   share: {
@@ -65,7 +66,7 @@ const PEOPLE = {
   }
 };
 
-const Landing = () => (
+const Landing = ({ data }) => (
   <FirebaseProvider>
     <div className="body-wrap boxed-container">
       <header className="site-header">
@@ -135,8 +136,8 @@ const Landing = () => (
                   </svg>
                 </div>
                 <div className="hero-main-shape">
-                  <img
-                    src="images/logo.png"
+                  <Image
+                    fileName="logo/logo.png"
                     alt="core of science main product"
                   />
                 </div>
@@ -343,10 +344,11 @@ const Landing = () => (
                       <div className="testimonial-inner">
                         <div className="testimonial-main">
                           <div className="testimonial-header">
-                            <img
+                            <Image
                               className="mb-16"
-                              src={person.photo}
+                              fileName={person.photo}
                               alt="Testimonial"
+                              width="56px"
                             />
                           </div>
                           <div className="testimonial-body">
