@@ -1,5 +1,6 @@
 import React from "react";
 import { FirebaseProvider } from "../context/firebase";
+import logoImage from "../images/logo/logo.png";
 import "../styles/scss/style.scss";
 import EmailForm from "../components/email";
 import Image from "../components/Image";
@@ -79,7 +80,7 @@ const Landing = ({ data }) => (
                 <a href="/" title="Core of Science">
                   <img
                     style={{ height: "1em" }}
-                    src="images/logo.png"
+                    src={logoImage}
                     alt="core of science logo"
                   />
                 </a>
@@ -395,7 +396,7 @@ const Landing = ({ data }) => (
                 <img
                   width="32"
                   height="32"
-                  src="images/logo.png"
+                  src={logoImage}
                   alt="core of science logo"
                 />
               </a>
