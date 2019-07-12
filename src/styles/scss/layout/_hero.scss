@@ -30,7 +30,7 @@
 
 .hero-main-shape {
 
-	svg {
+	img {
 		width: 140%;
 		height: auto;
 	}
@@ -60,6 +60,7 @@
 	.hero-illustration {
 		margin-top: -143px;
 		padding-bottom: 0;
+		min-width: 400px;
 	}
 
 	.hero-shape {
@@ -90,5 +91,10 @@
     .hero-copy {
         padding-right: 92px;
         min-width: 620px;
-    }
+	}
+
+	.hero-illustration {
+		margin-top: -190px;
+        min-width: 512px;
+	}
 }

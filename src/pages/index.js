@@ -4,6 +4,7 @@ import logoImage from "../images/logo/logo.png";
 import "../styles/scss/style.scss";
 import EmailForm from "../components/email";
 import Image from "../components/Image";
+import FluidImage from "../components/FluidImage";
 
 const PRINCIPLES = {
   share: {
@@ -137,7 +138,7 @@ const Landing = ({ data }) => (
                   </svg>
                 </div>
                 <div className="hero-main-shape">
-                  <Image
+                  <FluidImage
                     fileName="logo/logo.png"
                     alt="core of science main product"
                   />
