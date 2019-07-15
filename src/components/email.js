@@ -21,7 +21,7 @@ const EmailForm = ({ className }) => {
       .set({ email, timestamp: new Date() })
       .then(() => {
         setEmail("");
-        setMessage("Thanks for registering");
+        setMessage("Thanks for registering!");
       })
       .catch(() => setError("Invalid email"));
   };
@@ -32,20 +32,40 @@ const EmailForm = ({ className }) => {
   return (
     <div>
       {message ? (
-        <div>
+        <div
+          style={{
+            textAlign: "center",
+            backgroundColor: "#b2dd8f",
+            borderRadius: "10px",
+            border: "2px solid green",
+            padding: "10px"
+          }}
+        >
           <h5
             style={{
-              color: "rgb(255, 55, 94)"
+              margin: "0px",
+              color: "#11103e"
             }}
           >
             {message}
           </h5>
-          <button
+          <a
+            style={{
+              textDecoration: "underline",
+              fontWeight: "bold",
+              color: "green",
+              cursor: "pointer"
+            }}
             onClick={resetMessage}
-            className="button button-primary button-block button-shadow"
+            onMouseEnter={event => {
+              event.target.style.color = "crimson";
+            }}
+            onMouseLeave={event => {
+              event.target.style.color = "green";
+            }}
           >
             Register other email
-          </button>
+          </a>
         </div>
       ) : (
         <div className={className}>
