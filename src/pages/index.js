@@ -3,7 +3,8 @@ import { FirebaseProvider } from "../context/firebase";
 import logoImage from "../images/logo/logo.png";
 import "../styles/scss/style.scss";
 import EmailForm from "../components/email";
-import Image from "../components/Image";
+import FixedImage from "../components/FixedImage";
+import FluidImage from "../components/FluidImage";
 
 const PRINCIPLES = {
   share: {
@@ -137,7 +138,7 @@ const Landing = ({ data }) => (
                   </svg>
                 </div>
                 <div className="hero-main-shape">
-                  <Image
+                  <FluidImage
                     fileName="logo/logo.png"
                     alt="core of science main product"
                   />
@@ -345,7 +346,7 @@ const Landing = ({ data }) => (
                       <div className="testimonial-inner">
                         <div className="testimonial-main">
                           <div className="testimonial-header">
-                            <Image
+                            <FixedImage
                               className="mb-16"
                               fileName={person.photo}
                               alt="Testimonial"
