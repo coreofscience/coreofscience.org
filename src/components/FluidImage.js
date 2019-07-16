@@ -2,18 +2,18 @@ import React from "react";
 import Img from "gatsby-image";
 import { StaticQuery, graphql } from "gatsby";
 
-const Image = props => (
+const FluidImage = props => (
   <StaticQuery
     query={graphql`
-      query testimonial {
+      query fluidImage {
         images: allFile {
           edges {
             node {
               relativePath
               name
               childImageSharp {
-                fixed {
-                  ...GatsbyImageSharpFixed
+                fluid(maxWidth: 1000) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -29,17 +29,12 @@ const Image = props => (
         return null;
       }
 
-      const picture = image.node.childImageSharp.fixed;
+      const picture = image.node.childImageSharp.fluid;
       return (
-        <Img
-          alt={props.alt}
-          fixed={picture}
-          className={props.className}
-          imgStyle={{ width: props.width, height: props.height }}
-        />
+        <Img alt={props.alt} fluid={picture} className={props.className} />
       );
     }}
   />
 );
 
-export default Image;
+export default FluidImage;
