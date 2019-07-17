@@ -21,7 +21,7 @@ const EmailForm = ({ className }) => {
       .set({ email, timestamp: new Date() })
       .then(() => {
         setEmail("");
-        setMessage("Thank you for keeping in touch!");
+        setMessage("Thanks for keeping in touch!");
       })
       .catch(() => setError("Invalid email"));
   };
@@ -52,17 +52,14 @@ const EmailForm = ({ className }) => {
           </span>
           <a
             style={{
-              fontWeight: "bold",
               color: "#11103e",
-              cursor: "pointer"
+              textDecoration: null
             }}
-            onClick={resetMessage}
-            onMouseEnter={event => {
-              event.target.style.color = "crimson";
+            onClick={e => {
+              e.preventDefault();
+              resetMessage();
             }}
-            onMouseLeave={event => {
-              event.target.style.color = "#11103e";
-            }}
+            href="/"
           >
             &times;
           </a>
