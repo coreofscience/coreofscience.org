@@ -29,66 +29,65 @@ const EmailForm = ({ className }) => {
     setMessage("");
   };
 
-  return (
-    <div>
-      {message ? (
-        <div
-          style={{
-            textAlign: "center",
-            backgroundColor: "#EEF1FA",
-            borderRadius: "10px",
-            border: "2px solid #565678",
-            padding: "10px"
+  return message ? (
+    <div
+      className="email-thanks"
+      style={{
+        textAlign: "center",
+        backgroundColor: "#EEF1FA",
+        borderRadius: "10px",
+        border: "2px solid #565678",
+        padding: "10px"
+      }}
+    >
+      <span
+        className="email-thanks-message"
+        style={{
+          margin: "0px",
+          color: "#11103e",
+          paddingRight: "20px"
+        }}
+      >
+        {message}
+      </span>
+      <a
+        className="email-thanks-close"
+        style={{
+          color: "#11103e",
+          textDecoration: null
+        }}
+        onClick={e => {
+          e.preventDefault();
+          resetMessage();
+        }}
+        href="/"
+      >
+        &times;
+      </a>
+    </div>
+  ) : (
+    <div className={className}>
+      <div className="control control-expanded">
+        <input
+          className={`input ${error ? "error" : ""}`}
+          type="email"
+          name="email"
+          value={email}
+          onChange={e => {
+            setEmail(e.target.value);
+            setError();
           }}
+          placeholder="example@email.com"
+        />
+      </div>
+      <div className="control">
+        <button
+          onClick={storeEmail}
+          className="button button-primary button-block button-shadow"
         >
-          <span
-            style={{
-              margin: "0px",
-              color: "#11103e",
-              paddingRight: "20px"
-            }}
-          >
-            {message}
-          </span>
-          <a
-            style={{
-              color: "#11103e",
-              textDecoration: null
-            }}
-            onClick={e => {
-              e.preventDefault();
-              resetMessage();
-            }}
-            href="/"
-          >
-            &times;
-          </a>
-        </div>
-      ) : (
-        <div className={className}>
-          <div className="control control-expanded">
-            <input
-              className={`input ${error ? "error" : ""}`}
-              type="email"
-              name="email"
-              value={email}
-              onChange={e => {
-                setEmail(e.target.value);
-                setError();
-              }}
-              placeholder="example@email.com"
-            />
-          </div>
-          <div className="control">
-            <button
-              onClick={storeEmail}
-              className="button button-primary button-block button-shadow"
-            >
-              Keep in touch
-            </button>
-          </div>
-        </div>
-      )}
+          Keep in touch
+        </button>
+      </div>
     </div>
   );
 };
