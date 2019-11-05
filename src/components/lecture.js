@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { Helmet } from "react-helmet";
 import "../styles/markdown.css";
 
@@ -16,10 +16,11 @@ export default function Template({ data }) {
         marginRight: "auto",
         width: "80%",
         textAlign: "justify",
-        fontSize: "0.8rem"
+        fontSize: "0.8rem",
+        paddingBottom: "20px"
       }}
     >
-      <Helmet title={`UCLA Lectures - ${post.frontmatter.title}`} />
+      <Helmet title={`${post.frontmatter.title}`} />
       <div className="lecture">
         <h2>{post.frontmatter.title}</h2>
         <p>{post.frontmatter.date}</p>
@@ -29,6 +30,8 @@ export default function Template({ data }) {
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </div>
+      <hr />
+      <Link to="/intro_data_science">Back</Link>
     </div>
   );
 }

@@ -39,3 +39,30 @@
   padding-left: 0.75em;
   border-left: 0.25em solid crimson;
 }
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding-left: 0.2em !important;
+  padding-right: 0.2em !important;
+}
+
+.gatsby-resp-image-image {
+  padding: 10px;
+  background-color: white !important;
+}
+
+.markdown-div-tables {
+  width: 100%;
+  height: 20rem;
+  overflow: auto;
+}
+
+.markdown-div-tables > table > thead {
+  font-weight: bolder;
+  background-color: #d2daf0;
+}
+
+.markdown-div-tables td {
+  padding: 10px 16px !important;
+  border: 1px solid #d2daf0;
+}
