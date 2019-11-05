@@ -98,7 +98,7 @@ const Landing = ({ data }) => (
               <div className="hero-copy">
                 <h1 className="hero-title mt-0">Core of science</h1>
                 <p className="hero-paragraph">
-                  Connecting people through knowledge.
+                  Connecting people through sharing knowledge.
                 </p>
                 <EmailForm className="hero-form field field-grouped" />
               </div>
