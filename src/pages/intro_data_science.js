@@ -5,9 +5,18 @@ import { Helmet } from "react-helmet";
 export default function Index({ data }) {
   const posts = data.allMarkdownRemark.edges;
   return (
-    <div>
-      <Helmet title={"UCLA - Introduction to Data Science"} />
+    <div
+      style={{
+        marginLeft: "auto",
+        marginRight: "auto",
+        width: "80%",
+        fontSize: "0.8rem",
+        paddingBottom: "20px"
+      }}
+    >
+      <Helmet title={"Introduction to Data Science"} />
       <h1>Introduction to Data Science</h1>
+      <hr />
       <ul>
         {posts
           .filter(post => post.node.frontmatter.title.length > 0)
@@ -32,7 +41,7 @@ export default function Index({ data }) {
 
 export const pageQuery = graphql`
   query PostsQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___date] }) {
       edges {
         node {
           excerpt(pruneLength: 250)
