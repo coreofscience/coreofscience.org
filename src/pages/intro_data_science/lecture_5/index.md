@@ -27,6 +27,7 @@ Now, you have the dataset to start to work [EM.txt](files/EM.txt).
 The first thing that you have to do is read the dataset and [convert](https://cran.r-project.org/web/packages/bibliometrix/vignettes/bibliometrix-vignette.html) it into a dataframe:
 
 **Input:**
+
 ```r
 text <- readFiles("/cloud/project/data/EM.txt")
 tos_dataframe <- convert2df(text, dbsource = "isi", format = "plaintext")
@@ -39,9 +40,9 @@ tos_dataframe$IDWOS <- rownames(tos_dataframe)
 ```
 Converting your isi collection into a bibliographic dataframe
 
-Articles extracted   100 
-Articles extracted   200 
-Articles extracted   244 
+Articles extracted   100
+Articles extracted   200
+Articles extracted   244
 Done!
 
 
@@ -49,11 +50,45 @@ Generating affiliation field tag AU_UN from C1:  Done!
 ```
 
 **Input:**
+
 ```r
-tos_dataframe %>% 
+tos_dataframe %>%
   separate_rows(CR, sep = "; ")
 ```
 
 **Output:**
 
 ![Datos](images/image5.png)
+
+**Input:**
+
+```r
+EFinal%>%
+  mutate(IDWOS2 = paste(IDWOS,sep = " ",VL,BP,DI))
+```
+
+**Output:**
+
+If we want to create a graph of the dataset, we install de library [graph](https://www.r-graph-gallery.com/) as follow:
+
+**Input:**
+
+```r
+library(igraph)
+```
+
+**Input:**
+
+```r
+listaenlaces <- M_2[!is.na(M_2$CR),c("IDWOS2", "CR")]
+```
+
+**Output:**
+
+**Input:**
+
+```r
+grafo_1 <-graph.data.frame(listaenlaces, directed = TRUE)
+```
+
+**Output:**
