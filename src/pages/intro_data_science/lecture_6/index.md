@@ -4,7 +4,7 @@ date: "2019-09-21"
 path: "/intro_data_science/lecture_6"
 ---
 
-To star the first thing that we are going to do is to import the required libraries:
+To start, the first thing that we are going to do is to import the required libraries:
 
 **Input:**
 
@@ -15,7 +15,7 @@ library(igraph)
 
 Then, we have to upload the CSV dataset named [collection.csv](files/collection.csv) in the folder data.
 
-First we are going to read the csv file with the edges.
+First we are going to read the CSV file with the edges.
 
 **Input:**
 
@@ -38,7 +38,7 @@ Then, we are going to compute the graph from our collection of edges.
 **Input:**
 
 ```r
-my_graph <- graph.data.frame(collections, directed = TRUE)
+my_graph <- graph.data.frame(collections, directed=TRUE)
 ```
 
 Summarize the properties and values of `my_graph`.
@@ -68,14 +68,14 @@ plot(my_graph)
 
 ![My graph](images/image1.png)
 
-In order to compute the **degree of our graph**, we could use the function degree.
+In order to compute the [degree of our graph](<https://en.wikipedia.org/wiki/Degree_(graph_theory)>), we could use the function degree.
 
 **Input:**
 
 "In" degree:
 
 ```r
-degree(graph = my_graph, mode = "in")
+degree(graph=my_graph, mode="in")
 ```
 
 **Output:**
@@ -105,7 +105,7 @@ degree(graph = my_graph, mode = "out")
 "In/Out" degree:
 
 ```r
-degree(graph = my_graph, mode = "all")
+degree(graph=my_graph, mode="all")
 ```
 
 **Output:**
@@ -115,12 +115,12 @@ degree(graph = my_graph, mode = "all")
 2 2 3 2 3 2 2
 ```
 
-To compute the **betweenness centrality** of our graph, we should use the function betweenness.
+To compute the [betweenness centrality](https://en.wikipedia.org/wiki/Betweenness_centrality) of our graph, we should use the function betweenness.
 
 **Input:**
 
 ```r
-betweenness(graph = my_graph, directed = TRUE)
+betweenness(graph=my_graph, directed=TRUE)
 ```
 
 **Output:**
@@ -135,10 +135,10 @@ Now, we should create a dataframe with all the information about the degree and 
 **Input:**
 
 ```r
-my_data <- data.frame(node = V(my_graph)$name,
-                      indegree = degree(my_graph, mode = "in"),
-                      outdegree = degree(my_graph, mode = "out"),
-                      bet = betweenness(my_graph, directed = TRUE))
+my_data <- data.frame(node=V(my_graph)$name,
+                      indegree=degree(my_graph, mode="in"),
+                      outdegree=degree(my_graph, mode="out"),
+                      bet=betweenness(my_graph, directed=TRUE))
 ```
 
 **Output:**
@@ -215,7 +215,7 @@ my_subset <- subset(my_data,
 
 According to the previous exercises, at this point it'll be possible to create the ToS algorithm.
 
-- Step 1: read.
+- Step 1: read the ISI Web of Science file (in this case named **EM.txt**).
 
   ```r
   text <- readFiles("/cloud/project/data/EM.txt")
@@ -223,13 +223,14 @@ According to the previous exercises, at this point it'll be possible to create t
   dataframe$IDWOS <- rownames(dataframe)
   ```
 
-- Step 2: split.
+- Step 2: split the cited references by using "; " as separator. This is the first step to to prepare the data, having
+  a matrix of one-one paper-cited_reference.
 
   ```r
   dataframe_splitted  <- dataframe %>% separate_rows(CR, sep = "; ")
   ```
 
-- Step 3: change the format.
+- Step 3: change the format of the paper name to be similar to the references format.
 
   ```r
   dataframe_formated <- dataframe_splitted %>% mutate(IDWOS2 = paste(IDWOS, sep = ", ",
@@ -246,7 +247,7 @@ According to the previous exercises, at this point it'll be possible to create t
 
   ```
 
-- Step 5: clean the graph.
+- Step 5: clean the graph (remove nodes with indegree equals to 1 and outdegree equals to 0).
 
   ```r
   tos_graph_cleaned <- data.frame(node = V(graph = tos_graph)$name,
@@ -257,3 +258,5 @@ According to the previous exercises, at this point it'll be possible to create t
   tos_cleaned <- subset(tos_graph_cleaned,
                       !((tos_graph_cleaned$indegree == 1) & (tos_graph_cleaned$outdegree== 0)))
   ```
+
+All of this code was packaged in functions and it is hosted in a open source [github repository](https://github.com/coreofscience/r-tos). Feel free to download it and use it as much as you can. If you have any questions or suggestions, do not hesitate to communicate them to us.
