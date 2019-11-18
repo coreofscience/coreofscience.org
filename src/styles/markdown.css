@@ -1,0 +1,68 @@
+.lecture-content p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.gatsby-highlight pre[class*="language-"] {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  overflow: initial;
+  float: left; /* 1 */
+  min-width: 100%; /* 2 */
+  font-size: 0.8rem;
+}
+
+.gatsby-highlight {
+  background-color: #272822;
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding: 0;
+  padding-left: 2.8em;
+  overflow: initial;
+  font-size: 0.8rem;
+}
+
+.gatsby-highlight-code-line {
+  background-color: gray;
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid crimson;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding-left: 0.2em !important;
+  padding-right: 0.2em !important;
+}
+
+.gatsby-resp-image-image {
+  padding: 10px;
+  background-color: white !important;
+}
+
+.markdown-div-tables {
+  width: 100%;
+  height: 20rem;
+  overflow: auto;
+}
+
+.markdown-div-tables > table > thead {
+  font-weight: bolder;
+  background-color: #d2daf0;
+}
+
+.markdown-div-tables td {
+  padding: 10px 16px !important;
+  border: 1px solid #d2daf0;
+}
