@@ -407,7 +407,7 @@ const Landing = ({ data }) => (
                 <a href="https://github.com/coreofscience">GitHub</a>
               </li>
               <li>
-                <a href="tos.coreofscience.org/">ToS</a>
+                <a href="https://tos.coreofscience.org/">ToS</a>
               </li>
             </ul>
             <ul className="footer-social-links list-reset">
