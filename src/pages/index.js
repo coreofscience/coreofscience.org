@@ -407,7 +407,7 @@ const Landing = ({ data }) => (
                 <a href="https://github.com/coreofscience">GitHub</a>
               </li>
               <li>
-                <a href="https://tos-manizales.firebaseapp.com/">ToS</a>
+                <a href="https://tos.coreofscience.org/">ToS</a>
               </li>
             </ul>
             <ul className="footer-social-links list-reset">
@@ -443,7 +443,7 @@ const Landing = ({ data }) => (
               </li>
             </ul>
             <div className="footer-copyright">
-              &copy; 2019 Core of Science, built using cruip.com/april
+              &copy; 2020 Core of Science, built using cruip.com/april
             </div>
           </div>
         </div>
