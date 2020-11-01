@@ -1,0 +1,22 @@
+{
+  "projects": {
+    "prod": "coreofscience",
+    "dev": "coreofscience-dev"
+  },
+  "targets": {
+    "coreofscience-dev": {
+      "hosting": {
+        "landing": [
+          "coreofscience-dev"
+        ]
+      }
+    },
+    "coreofscience": {
+      "hosting": {
+        "landing": [
+          "coreofscience"
+        ]
+      }
+    }
+  }
+}
