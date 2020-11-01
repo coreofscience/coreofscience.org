@@ -25,19 +25,11 @@ jobs:
           CI: true
 
       - name: Build
-        run: |
-          npm run build
-          cat << EOF > .firebaserc
-          {
-              "projects": {
-                  "default": "coreofscience"
-              }
-          }
-          EOF
-          npm run firebase -- target:apply hosting cos coreofscience
+        run: npm run build
+
         env:
           CI: true
-          GATSBY_FIREBASE_API_KEY: ${{ secrets.PROD_API_KEY }}
+          GATSBY_FIREBASE_API_KEY: ${{ secrets.FIREBASE_WEB_API_KEY_PROD }}
           GATSBY_FIREBASE_AUTH_DOMAIN: "coreofscience.firebaseapp.com"
           GATSBY_FIREBASE_DATABASE_URL: "https://coreofscience.firebaseio.com"
           GATSBY_FIREBASE_PROJECT_ID: "coreofscience"
@@ -48,4 +40,4 @@ jobs:
       - name: Deploy
         run: |
           npm install firebase-tools
-          npm run deploy -- --token=${{ secrets.FIREBASE_TOKEN }} -P coreofscience
+          npm run deploy -- --token=${{ secrets.FIREBASE_TOKEN }} -P prod
