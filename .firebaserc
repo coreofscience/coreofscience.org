@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "prod": "coreofscience",
+    "dev": "coreofscience-dev"
+  }
+}
