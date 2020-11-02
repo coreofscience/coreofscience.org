@@ -2,15 +2,15 @@ name: Deploy to Preview Channel
 
 on:
   pull_request:
-    # Optionally configure to run only for specific files. For example:
-    # paths:
-    # - "website/**"
 
 jobs:
   build_and_preview:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: Install apt dependency
+        run: sudo apt-get --only-upgrade install libvips
 
       - name: Use Node 14
         uses: actions/setup-node@v1
