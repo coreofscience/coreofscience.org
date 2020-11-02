@@ -36,6 +36,7 @@ jobs:
           GATSBY_FIREBASE_STORAGE_BUCKET: "coreofscience.appspot.com"
           GATSBY_FIREBASE_MESSAGING_SENDER_ID: "217902041600"
           GATSBY_FIREBASE_APP_ID: "1:217902041600:web:54618397fad21282b426e5"
+          GATSBY_FIREBASE_MEASUREMENT_ID: "G-S7D28K5ZT8"
 
       - name: Deploy
         run: |

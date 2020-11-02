@@ -74,7 +74,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-143765858-1",
+        trackingId: process.env.GATSBY_FIREBASE_MEASUREMENT_ID,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
