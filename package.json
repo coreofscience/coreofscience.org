@@ -29,6 +29,7 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "firebase-tools": "^8.14.1",
     "prettier": "^1.19.1"
   },
   "keywords": [
