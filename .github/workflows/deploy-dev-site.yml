@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Build and Deploy Dev Site
 
 on:
   push:
@@ -14,14 +14,18 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Install apt dependency
+        run: sudo apt-get install libvips
+
       - name: Use Node 12
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
 
-      - run: |
+      - name: Build and deploy 
+        run: |
           npm ci
-          npm run build
+          npm run deploy -- --token=${{ secrets.FIREBASE_TOKEN }} -P dev
         env:
           CI: true
           GATSBY_FIREBASE_API_KEY: ${{ secrets.FIREBASE_WEB_API_KEY_DEV }}
@@ -32,9 +36,4 @@ jobs:
           GATSBY_FIREBASE_MESSAGING_SENDER_ID: "421154467745"
           GATSBY_FIREBASE_APP_ID: "1:421154467745:web:d7dd5ed17243869ba765e0"
           GATSBY_FIREBASE_MEASUREMENT_ID: "G-RN1WPXBDB2"
-
-      - name: Deploy
-        run: |
-          npm install firebase-tools
-          npm run deploy -- --token=${{ secrets.FIREBASE_TOKEN }} -P dev
 
