@@ -27,6 +27,7 @@ const FirebaseProvider = ({ children }) => {
         storageBucket: process.env.GATSBY_FIREBASE_STORAGE_BUCKET,
         messagingSenderId: process.env.GATSBY_FIREBASE_MESSAGING_SENDER_ID,
         appId: process.env.GATSBY_FIREBASE_APP_ID,
+        measurementId: process.env.GATSBY_FIREBASE_MEASUREMENT_ID,
       };
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
