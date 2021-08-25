@@ -1,6 +1,25 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
+exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
+  if (stage === "build-html") {
+    actions.setWebpackConfig({
+      externals: getConfig().externals.concat(function(
+        context,
+        request,
+        callback
+      ) {
+        const regex = /^@?firebase(\/(.+))?/;
+        // exclude firebase products from being bundled, so they will be loaded using require() at runtime.
+        if (regex.test(request)) {
+          return callback(null, "umd " + request);
+        }
+        callback();
+      }),
+    });
+  }
+};
+
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
   const lectureComponent = path.resolve(`./src/components/lecture.js`);
@@ -20,7 +39,7 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
       return Promise.reject(result.errors);
     }
@@ -29,7 +48,7 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: node.frontmatter.path,
         component: lectureComponent,
-        context: {}
+        context: {},
       });
     });
   });
