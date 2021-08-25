@@ -44,8 +44,6 @@ const FirebaseProvider = ({ children }) => {
     firebase.analytics();
   }, []);
 
-  if (state.app === null) return <div>Loading...</div>;
-
   return (
     <FirebaseContext.Provider value={state}>
       {children}
