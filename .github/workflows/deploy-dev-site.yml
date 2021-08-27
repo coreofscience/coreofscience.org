@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 12.x
 
-      - name: Build and deploy 
+      - name: Build and deploy
         run: |
           npm ci
           npm run deploy -- --token=${{ secrets.FIREBASE_TOKEN }} -P dev
