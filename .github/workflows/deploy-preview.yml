@@ -15,6 +15,7 @@ jobs:
           tar -xvf zola-v0.14.1-x86_64-unknown-linux-gnu.tar.gz
 
       - run: |
+          ./zola check
           ./zola build
         env:
           CI: true
