@@ -1,7 +1,4 @@
 +++
 title = "Projects"
+template = "projects.html"
 +++
-
-## Tree of science
-
-Something something.

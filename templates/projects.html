@@ -1,0 +1,9 @@
+{% extends "index.html" %}
+
+{% block content %}
+	{{ section.content | safe }}
+	{% for page in section.pages %}
+		<h2>{{ page.title }}</h2>
+		{{ page.content | safe }}
+	{% endfor %}
+{% endblock content %}
