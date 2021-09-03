@@ -23,6 +23,16 @@
     />
   </head>
   <body>
+    <head>
+      <a href="{{ config.base_url }}">Tos Logo</a>
+      <nav>
+        <ul>
+          <li>
+            <a href="{{ config.base_url }}/projects">Projects</a>
+          </li>
+        </ul>
+      </nav>
+    </head>
     <div id="content">{% block content %}Hello{% endblock %}</div>
   </body>
 </html>
