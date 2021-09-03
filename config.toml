@@ -12,5 +12,12 @@ build_search_index = false
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = false
 
+[link_checker]
+# Skip link checking for external URLs that start with these prefixes
+skip_prefixes = [
+    "http://scienti.colciencias.gov.co:8081",
+]
+
+
 [extra]
 # Put all your custom variables here
