@@ -28,11 +28,21 @@
       <nav>
         <ul>
           <li>
-            <a href="{{ config.base_url }}/projects">Projects</a>
+            <a href="{{ get_url(path="@/projects/_index.md") }}">Projects</a>
+          </li>
+          <li>
+            <a href="{{ get_url(path="@/about.md") }}">About</a>
+          </li>
+          <li>
+            <a href="{{ get_url(path="@/people/_index.md") }}">People</a>
           </li>
         </ul>
       </nav>
     </head>
     <div id="content">{% block content %}Hello{% endblock %}</div>
   </body>
+
+  <script type="application/javascript">
+    console.log(`{{__tera_context}}`)
+  </script>
 </html>
