@@ -1,10 +1,15 @@
 footer {
   background-image: url("/assets/footer.jpg");
   width: 100%;
-  height: 150px;
-  bottom: 0;
-  position: absolute;
-  left: 0;
+  min-height: 150px;
   background-size: cover;
   background-position: bottom;
+}
+
+footer .logo {
+  text-align: center;
+}
+
+footer .logo img {
+  max-width: 120px;
 }
