@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-brand-yellow: #ef9712;
+  --color-brand-blue: #010d3c;
+  --color-brand-green: #009c35;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+  color: var(--color-brand-blue);
+}
