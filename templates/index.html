@@ -23,26 +23,41 @@
     />
   </head>
   <body>
-    <head>
+    <header>
       <a href="{{ config.base_url }}">Tos Logo</a>
       <nav>
         <ul>
           <li>
-            <a href="{{ get_url(path="@/projects/_index.md") }}">Projects</a>
+            {% set projects = get_section(path="projects/_index.md") %}
+            <a href="{{ projects.path }}">Projects</a>
           </li>
           <li>
-            <a href="{{ get_url(path="@/about.md") }}">About</a>
+            {% set about = get_page(path="about.md") %}
+            <a href="{{ about.path }}">About</a>
           </li>
           <li>
-            <a href="{{ get_url(path="@/people/_index.md") }}">People</a>
+            {% set people = get_section(path="people/_index.md") %}
+            <a href="{{ people.path }}">People</a>
+          </li>
+          <li>
+            {% set help = get_page(path="help.md") %}
+            <a href="{{ help.path }}">Help</a>
+          </li>
+          <li>
+            {% set dian = get_section(path="dian/_index.md") %}
+            <a href="{{ dian.path }}">DIAN</a>
+          </li>
+          <li>
+            {% set contact = get_page(path="contact.md") %}
+            <a href="{{ contact.path }}">Contact</a>
           </li>
         </ul>
       </nav>
-    </head>
-    <div id="content">{% block content %}Hello{% endblock %}</div>
+    </header>
+    <main id="content">{% block content %}Hello{% endblock %}</main>
+    <footer>&copy; 2021 Core of Science.</footer>
   </body>
-
   <script type="application/javascript">
-    console.log(`{{__tera_context}}`)
+    console.log(`{{__tera_context}}`);
   </script>
 </html>
