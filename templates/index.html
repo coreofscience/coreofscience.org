@@ -21,7 +21,14 @@
   </head>
   <body>
     <header>
-      <a href="{{ config.base_url }}">Tos Logo</a>
+      {% set home = get_section(path="_index.md") %}
+      <a href="{{ home.path }}">
+        <img
+          class="branding-logo"
+          src="/assets/logo-white.png"
+          alt="Core of Science"
+        />
+      </a>
       <nav>
         <ul>
           <li>

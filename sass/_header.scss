@@ -1,0 +1,35 @@
+header {
+  background: linear-gradient(
+    var(--color-brand-green),
+    var(--color-brand-blue)
+  );
+  color: white;
+}
+
+header a {
+  color: white;
+}
+
+header .branding-logo {
+  max-width: 5rem;
+}
+
+nav ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li:hover {
+  background: white;
+  // transition: background 0.5s ease;
+
+  a {
+    color: var(--color-brand-blue);
+  }
+}
+
+nav ul a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
