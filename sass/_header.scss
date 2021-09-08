@@ -21,9 +21,7 @@ nav ul {
 }
 
 nav ul li:hover {
-  background: white;
-  // transition: background 0.5s ease;
-
+  background: rgba(255, 255, 255, 0.75);
   a {
     color: var(--color-brand-blue);
   }
