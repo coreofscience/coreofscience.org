@@ -21,7 +21,8 @@
   </head>
   <body>
     <header>
-      <a href="{{ config.base_url }}">Tos Logo</a>
+      {% set home = get_section(path="_index.md") %}
+      <a href="{{ home.path }}">Tos Logo</a>
       <nav>
         <ul>
           <li>
