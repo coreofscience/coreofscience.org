@@ -6,6 +6,12 @@ header {
   color: white;
 }
 
+header .container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
 header a {
   color: white;
 }
@@ -15,9 +21,16 @@ header .branding-logo {
 }
 
 nav ul {
+  display: flex;
+  gap: 1ch;
   margin: 0;
   list-style: none;
   padding: 0;
+}
+
+nav ul li {
+  padding: 5px 1ch;
+  border-radius: 5px;
 }
 
 nav ul li:hover {
@@ -30,4 +43,17 @@ nav ul li:hover {
 nav ul a {
   text-decoration: none;
   text-transform: uppercase;
+}
+
+@media (max-width: 668px) {
+  header .container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    place-items: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
