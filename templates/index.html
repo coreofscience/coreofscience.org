@@ -21,39 +21,50 @@
   </head>
   <body>
     <header>
-      {% set home = get_section(path="_index.md") %}
-      <a href="{{ home.path }}">Tos Logo</a>
-      <nav>
-        <ul>
-          <li>
-            {% set projects = get_section(path="projects/_index.md") %}
-            <a href="{{ projects.path }}">Projects</a>
-          </li>
-          <li>
-            {% set about = get_page(path="about.md") %}
-            <a href="{{ about.path }}">About</a>
-          </li>
-          <li>
-            {% set people = get_section(path="people/_index.md") %}
-            <a href="{{ people.path }}">People</a>
-          </li>
-          <li>
-            {% set help = get_page(path="help.md") %}
-            <a href="{{ help.path }}">Help</a>
-          </li>
-          <li>
-            {% set dian = get_section(path="dian/_index.md") %}
-            <a href="{{ dian.path }}">DIAN</a>
-          </li>
-          <li>
-            {% set contact = get_page(path="contact.md") %}
-            <a href="{{ contact.path }}">Contact</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="container">
+        {% set home = get_section(path="_index.md") %}
+        <a class="branding" href="{{ home.path }}">
+          <img
+            class="branding-logo"
+            src="/assets/logo-white.png"
+            alt="Core of Science"
+            title="Core of Science"
+          />
+        </a>
+        <nav>
+          <ul>
+            <li>
+              {% set projects = get_section(path="projects/_index.md") %}
+              <a href="{{ projects.path }}">Projects</a>
+            </li>
+            <li>
+              {% set about = get_page(path="about.md") %}
+              <a href="{{ about.path }}">About</a>
+            </li>
+            <li>
+              {% set people = get_section(path="people/_index.md") %}
+              <a href="{{ people.path }}">People</a>
+            </li>
+            <li>
+              {% set help = get_page(path="help.md") %}
+              <a href="{{ help.path }}">Help</a>
+            </li>
+            <li>
+              {% set dian = get_section(path="dian/_index.md") %}
+              <a href="{{ dian.path }}">DIAN</a>
+            </li>
+            <li>
+              {% set contact = get_page(path="contact.md") %}
+              <a href="{{ contact.path }}">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <main id="content">{% block content %}Hello{% endblock %}</main>
-    <footer>&copy; 2021 Core of Science.</footer>
+    <main id="content">
+      <div class="container">{% block content %}Hello{% endblock %}</div>
+    </main>
+    <footer><div class="container">&copy; 2021 Core of Science.</div></footer>
     <script type="application/javascript">
       console.log(`{{__tera_context}}`);
     </script>
