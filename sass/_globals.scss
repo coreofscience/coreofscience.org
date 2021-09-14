@@ -18,3 +18,21 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 87ch;
+  margin: auto;
+  padding: 1rem;
+}
