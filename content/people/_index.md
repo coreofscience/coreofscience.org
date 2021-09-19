@@ -1,5 +1,6 @@
 +++
-title = "People"
+title = "**People**"
+description = "they make **this possible**"
 +++
 
 ## SEBASTÍAN ROBLEDO
