@@ -1,5 +1,6 @@
 +++
-title = "About us"
+title = "About **us**"
+description = "get to know **us** better"
 +++
 
 Core Of Science is a non-profit organization, we promote the science and data
