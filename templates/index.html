@@ -14,7 +14,7 @@
     <title>Core of Science</title>
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Oswald&family=Ubuntu&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Oswald&family=Ubuntu:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
     <link href="/style.css" rel="stylesheet" />
@@ -64,7 +64,59 @@
     <main id="content">
       <div class="container">{% block content %}Hello{% endblock %}</div>
     </main>
-    <footer><div class="container">&copy; 2021 Core of Science.</div></footer>
+    <footer>
+      <div class="container">
+        <div class="logo">
+          <img src="/assets/logo-white.png" />
+        </div>
+
+        <div class="contact">
+          <div class="information-contact">
+            <img
+              class="contact-icons"
+              src="/assets/iconos footer telefono.png"
+            />
+            <p>
+              <strong>318 659 4478</strong><br />
+              Sebastian Robledo Giraldo
+            </p>
+          </div>
+          <div class="information-contact">
+            <img
+              class="contact-icons"
+              src="/assets/iconos footer-direccion.png"
+            />
+            <p>
+              Calle 44 nº 29b 28 <br />
+              Dosquebradas
+            </p>
+          </div>
+          <div class="information-contact">
+            <img class="contact-icons" src="/assets/iconos footer correo.png" />
+            <p>director@coreofscience.com</p>
+          </div>
+        </div>
+
+        <div class="contact">
+          <div class="information-contact">
+            <img src="/assets/iconos footer-instagram.png" />
+            <p>@coreofscience</p>
+          </div>
+          <div class="information-contact">
+            <img src="/assets/iconos footer-youtube.png" />
+            <p>@core of science</p>
+          </div>
+          <div class="information-contact">
+            <img src="/assets/iconos footer-twitter.png" />
+            <p>@core_of_science</p>
+          </div>
+          <div class="information-contact">
+            <img src="/assets/iconos footer-facebook.png" />
+            <p>core of science</p>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script type="application/javascript">
       console.log(`{{__tera_context}}`);
     </script>
