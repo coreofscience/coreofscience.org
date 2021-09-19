@@ -52,7 +52,7 @@ nav ul a {
 header section.title {
   grid-area: title;
   text-align: center;
-  padding: 8vmin 0;
+  padding: 8vmin 0 calc(2rem + 8vmin);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,6 +94,10 @@ header::after {
 @media (max-width: 668px) {
   header .container {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "logo"
+      "navigation"
+      "title";
     gap: 1rem;
     place-items: center;
   }
