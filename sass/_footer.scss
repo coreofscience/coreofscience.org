@@ -1,15 +1,45 @@
 footer {
   background-image: url("/assets/footer.jpg");
+  color: white;
   width: 100%;
   min-height: 150px;
   background-size: cover;
   background-position: bottom;
 }
 
+footer .container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
 footer .logo {
-  text-align: center;
+  text-align: left;
 }
 
 footer .logo img {
-  max-width: 120px;
+  //max-width: 120px;
+  max-width: 25ch;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact p {
+  margin: 0;
+}
+
+.contact .information-contact img {
+  width: 2rem;
+}
+
+.information-contact {
+  display: flex;
+  flex-direction: row;
+  gap: 1ch;
+  text-align: left;
+  align-items: center;
 }
