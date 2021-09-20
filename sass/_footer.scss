@@ -10,6 +10,7 @@ footer {
 footer .container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
@@ -19,7 +20,7 @@ footer .logo {
 
 footer .logo img {
   //max-width: 120px;
-  max-width: 25ch;
+  max-width: 10rem;
 }
 
 .contact {
@@ -32,14 +33,15 @@ footer .logo img {
   margin: 0;
 }
 
-.contact .information-contact img {
-  width: 2rem;
-}
-
 .information-contact {
   display: flex;
   flex-direction: row;
+  flex-grow: 1;
   gap: 1ch;
   text-align: left;
   align-items: center;
+}
+
+.information-contact img {
+  width: 2rem;
 }

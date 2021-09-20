@@ -1,9 +1,7 @@
 +++
-title = "Core of Science"
+title = "Core of **Science**"
 template = "section.html"
 +++
-
-# Core of Science
 
 A non profit organization dedicated to science.
 
