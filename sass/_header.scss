@@ -10,11 +10,14 @@ header {
 
 header .container {
   display: grid;
-  grid-template-columns: 1fr auto;
-  grid-template-areas:
-    "logo navigation"
-    "title title";
   align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "logo"
+    "navigation"
+    "title";
+  place-items: center;
+  gap: 1rem;
 }
 
 header a {
@@ -27,8 +30,10 @@ header .branding-logo {
 
 nav ul {
   display: flex;
-  margin: 0;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
@@ -50,27 +55,27 @@ nav ul a {
 }
 
 header section.title {
-  grid-area: title;
-  text-align: center;
-  padding: 8vmin 0 calc(2rem + 8vmin);
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 1ch;
+  grid-area: title;
+  justify-content: center;
+  padding: 5vmin 0 calc(2rem + 5vmin);
+  text-align: center;
 }
 
 header h1 {
+  font-size: clamp(1rem, 10vmin, 4rem);
   font-weight: 300;
-  font-size: clamp(1rem, 5vmax, 4rem);
-  text-transform: uppercase;
   margin: 0;
+  text-transform: uppercase;
 }
 
 header section.title .slogan {
   background-color: var(--color-brand-green);
-  padding: 0.5rem 1rem;
   border-radius: 10px;
+  padding: 0.5rem 1rem;
   text-transform: lowercase;
 }
 
@@ -91,19 +96,11 @@ header::after {
   width: 4rem;
 }
 
-@media (max-width: 668px) {
+@media (min-width: 668px) {
   header .container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr auto;
     grid-template-areas:
-      "logo"
-      "navigation"
-      "title";
-    gap: 1rem;
-    place-items: center;
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
+      "logo navigation"
+      "title title";
   }
 }
