@@ -42,3 +42,31 @@ strong {
   margin: auto;
   padding: 1rem;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-size: clamp(1.611rem, 7.465vmin, 3.713rem);
+}
+h2 {
+  font-size: clamp(1.464rem, 6.221vmin, 2.856rem);
+}
+h3 {
+  font-size: clamp(1.331rem, 5.184vmin, 2.197rem);
+}
+h4 {
+  font-size: clamp(1.21rem, 4.32vmin, 1.69rem);
+}
+h5 {
+  font-size: clamp(1.1rem, 3.6vmin, 1.3rem);
+}
+h6 {
+  font-size: clamp(1rem, 3vmin, 1rem);
+}
