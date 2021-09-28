@@ -45,3 +45,15 @@ footer .logo img {
 .information-contact img {
   width: 2rem;
 }
+
+.container.sponsors {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.container.sponsors img {
+  height: 4rem;
+}
