@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#009d35" />
     <meta
       name="description"
       content="Core or Science - Connecting people by sharing knowledge."
@@ -12,6 +11,50 @@
     <meta name="author" content="Core of Science, Corp." />
     <meta name="copyright" content="2021 Core of Science." />
     <title>Core of Science</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#009d35" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Oswald&family=Ubuntu:wght@300;400;500;700&display=swap"
@@ -82,6 +125,19 @@
     </header>
     <main id="content">
       <div class="container">{% block content %}Hello{% endblock %}</div>
+      <section class="container sponsors">
+        {% for sponsor in config.extra.sponsors %}
+        <a
+          class="sponsor"
+          id="{{ sponsor.id }}"
+          href="{{ sponsor.url }}"
+          target="_blank"
+          rel="norefereer noopener"
+        >
+          <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" />
+        </a>
+        {% endfor %}
+      </section>
     </main>
     <footer>
       <div class="container">
@@ -96,7 +152,7 @@
               src="/assets/iconos footer telefono.png"
             />
             <p>
-              <strong>318 659 4478</strong><br />
+              <strong>+57 318 659 4478</strong><br />
               Sebastian Robledo Giraldo
             </p>
           </div>
