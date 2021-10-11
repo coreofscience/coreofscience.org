@@ -1,6 +1,7 @@
-{% extends "index.html" %}
+{% extends "base.html" %}
 
-<p>Hello there</p>
 {% block content %}
-{{ section.content | safe }}
+<div class="container">
+  {{ section.content | safe }}
+</div>
 {% endblock content %}

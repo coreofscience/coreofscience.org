@@ -1,6 +1,6 @@
 +++
 title = "Core of **Science**"
-template = "section.html"
+# template = "section.html"
 +++
 
 A non profit organization dedicated to science.
