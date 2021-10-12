@@ -34,3 +34,42 @@
   margin-bottom: 0.5rem;
   padding: 0px;
 }
+
+.project .green-separator{
+    max-width: 45px;
+}
+.projects{
+   padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+//events
+.events .featured-events {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .events .event {
+    flex-basis: 300px;
+    flex-grow: 1;
+  }
+  
+  .events {
+    background-color: #010e3c;
+    color: white;
+  }
+  
+  .events h3 {
+    margin-bottom: 0.5rem;
+    padding: 0px;
+  }
+  
+  .event .green-separator{
+      max-width: 45px;
+  }
+  .events{
+     padding-top: 10px;
+      padding-bottom: 10px;
+  }
