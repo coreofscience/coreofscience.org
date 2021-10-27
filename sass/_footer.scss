@@ -45,7 +45,29 @@ footer .logo img {
   width: 2rem;
 }
 
-.container.sponsors {
+.sponsors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: calc(2rem + 5vmin) 0;
+  gap: calc(2rem + 3vmin);
+}
+
+.sponsors .sponsors-slogan {
+  font-size: var(--fs-h3);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.sponsors .sponsors-slogan span.green {
+  color: white;
+  background: var(--color-brand-green);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.sponsors .sponsors-links {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
