@@ -66,11 +66,16 @@
   <body>
     {% include "snippets/header.html" %}
     <main id="content">
-      {% block content %}{% endblock %} {% include "snippets/sponsors.html" %}
+      {% block content %}{% endblock %}
+      <!-- --- -->
+      {% include "snippets/sponsors.html" %}
     </main>
     {% include "snippets/footer.html" %}
+    <!-- --- -->
+    {% if config.mode == "Serve" %}
     <script type="application/javascript">
       console.log(`{{__tera_context}}`);
     </script>
+    {% endif %}
   </body>
 </html>
