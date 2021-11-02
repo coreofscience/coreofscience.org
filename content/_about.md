@@ -1,5 +1,6 @@
 +++
 title = "About **us**"
+template = "about.html"
 description = "get to know **us** better"
 +++
 
