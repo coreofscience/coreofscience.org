@@ -1,25 +1,41 @@
-.definition p{
-    display: inline;
-    text-align: center;
-    font-size: 20px;
-  
+.definition p {
+  display: inline;
+  text-align: center;
+  font-size: 20px;
 }
-.name{
-    background-color: var(--color-brand-green);
-    color: white;
-    font-size: 20px;
-    font-weight: bold;  
+.name {
+  background-color: var(--color-brand-green);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px;
 }
-.definition{
-    text-align: center;
-    
+.definition {
+  text-align: center;
 }
-.question{
-    color: var(--color-brand-green);
+.questions {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  align-items: center;
 }
-img{
-float: left;
+.question-title {
+  color: var(--color-brand-green);
 }
-.imgquestions{
-    width: 50px; height: 50px;
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+.imagen {
+  max-width: 13rem;
+}
+
+.values {
+  display: flex;
+  gap: 2rem;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
 }
