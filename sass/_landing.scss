@@ -40,9 +40,9 @@
 }
 
 .feature {
-    background: url("/assets/ring-pattern.jpg") no-repeat;
-    background-position: bottom right;
-    background-size: cover;
+  background: url("/assets/ring-pattern.jpg") no-repeat;
+  background-position: bottom right;
+  background-size: cover;
 }
 
 //events
@@ -51,7 +51,6 @@
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-
 
 .events {
   background-color: #010e3c;
@@ -72,4 +71,14 @@
 .feature {
   padding-top: 5vmin;
   padding-bottom: 8vmin;
+}
+
+.projects h2 {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.projects h2 img {
+  height: 2em;
 }
