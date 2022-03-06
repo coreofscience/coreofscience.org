@@ -30,3 +30,4 @@ shell.nix
 **/.*.sw*
 .swp
 public
+.DS_Store
