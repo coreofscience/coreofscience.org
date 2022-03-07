@@ -22,21 +22,16 @@
   <div class="container">
     <h2><img src="/assets/gear-icon.png" alt="icon projects" />PROJECTS</h2>
     <div class="featured-projects">
-      <div class="project">
-        <h3>Bio-data lab</h3>
-        <img class="green-separator" src="/assets/linea-08.png" />
-        <p>Our bio data lab is a platform that...</p>
-      </div>
-      <div class="project">
-        <h3>Margaret</h3>
-        <img class="green-separator" src="/assets/linea-08.png" />
-        <p>Our margaret project does this and that.</p>
-      </div>
-      <div class="project">
-        <h3>python-sap</h3>
-        <img class="green-separator" src="/assets/linea-08.png" />
-        <p>Our python sap package does this and that.</p>
-      </div>
+      {% set projects = get_section(path="projects/_index.md") %}
+      {% for project in projects.pages %}
+        {% if project.extra.featured %}
+          <div class="project">
+            <h3>{{ project.title }}</h3>
+            <img class="green-separator" src="/assets/linea-08.png" />
+            <p>{{ project.summary | safe }}</p>
+          </div>
+        {% endif %}
+      {% endfor %}
     </div>
   </div>
 </div>
