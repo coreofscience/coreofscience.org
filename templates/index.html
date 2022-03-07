@@ -8,13 +8,9 @@
     <img class="green-separator" src="/assets/linea-08.png" />
     <div class="mission">
       <p>
-        Our mission is to <strong>training in data science </strong> for
+        Our mission is to <strong>training in data science</strong> for
         <br />research, technology and innovation.
       </p>
-      <br />
-      <br />
-      <br />
-      <br />
     </div>
   </div>
 </div>
@@ -29,6 +25,7 @@
             <h3>{{ project.title }}</h3>
             <img class="green-separator" src="/assets/linea-08.png" />
             <p>{{ project.summary | safe }}</p>
+            <a href="{{ project.permalink }}#continue-reading">Learn more</a>
           </div>
         {% endif %}
       {% endfor %}
@@ -39,7 +36,7 @@
 <div class="feature">
   <div class="container">
     <h2>
-      Solutions around higher education challenges because of the COVID pandemic
+      Higher education solutions
     </h2>
     <p>
       The objective of this project is the training of data scientists through
