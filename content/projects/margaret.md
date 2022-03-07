@@ -11,9 +11,9 @@ groups and researchers). Next, margaret merges it with data from Scimago,
 Publindex, and Google Scholar; finally, the merged data is exported in a `xlsx`
 file.
 
-[coreofscience/margaret](https://github.com/coreofscience/margaret)
-
 <!-- more -->
+
+[coreofscience/margaret](https://github.com/coreofscience/margaret)
 
 ## Accessing Margaret
 

@@ -5,7 +5,8 @@
 	{{ section.content | safe }}
 	{% for page in section.pages %}
 		<h2>{{ page.title }}</h2>
-		{{ page.content | safe }}
+		{{ page.summary | safe }}
+		<a href="{{ page.permalink }}#continue-reading">Learn more</a>
 	{% endfor %}
 </div>
 {% endblock content %}
