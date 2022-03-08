@@ -62,7 +62,11 @@
     />
     <link href="/style.css" rel="stylesheet" />
 
+    {% set gtag = get_env(name="FIREBASE_MEASUREMENT_ID", default="") %}
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    {% if gtag %}
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-S7D28K5ZT8"
@@ -74,8 +78,9 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "G-S7D28K5ZT8");
+      gtag("config", "{{ gtag }}");
     </script>
+    {% endif %}
   </head>
 
   <body>
