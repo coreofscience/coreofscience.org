@@ -34,14 +34,10 @@ jobs:
           FIREBASE_APP_ID: "1:421154467745:web:d7dd5ed17243869ba765e0"
           FIREBASE_MEASUREMENT_ID: "G-RN1WPXBDB2"
 
-      - name: Use Node 12
-        uses: actions/setup-node@v1
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        name: Ship dev site
         with:
-          node-version: 12.x
-
-      - name: Build and deploy
-        run: |
-          npm install firebase-tools
-          npm run deploy -- --token=${{ secrets.FIREBASE_TOKEN }} -P dev
-        env:
-          CI: true
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+          projectId: dev
+          channel: live
