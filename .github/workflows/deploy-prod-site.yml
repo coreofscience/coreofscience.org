@@ -25,14 +25,14 @@ jobs:
           ./zola build
         env:
           CI: true
-          FIREBASE_API_KEY: ${{ secrets.FIREBASE_WEB_API_KEY_DEV }}
-          FIREBASE_AUTH_DOMAIN: "coreofscience-dev.firebaseapp.com"
-          FIREBASE_DATABASE_URL: "https://coreofscience-dev.firebaseio.com"
-          FIREBASE_PROJECT_ID: "coreofscience-dev"
-          FIREBASE_STORAGE_BUCKET: "coreofscience-dev.appspot.com"
-          FIREBASE_MESSAGING_SENDER_ID: "421154467745"
-          FIREBASE_APP_ID: "1:421154467745:web:d7dd5ed17243869ba765e0"
-          FIREBASE_MEASUREMENT_ID: "G-RN1WPXBDB2"
+          FIREBASE_API_KEY: ${{ secrets.FIREBASE_WEB_API_KEY_PROD }}
+          FIREBASE_AUTH_DOMAIN: "coreofscience.firebaseapp.com"
+          FIREBASE_DATABASE_URL: "https://coreofscience.firebaseio.com"
+          FIREBASE_PROJECT_ID: "coreofscience"
+          FIREBASE_STORAGE_BUCKET: "coreofscience.appspot.com"
+          FIREBASE_MESSAGING_SENDER_ID: "217902041600"
+          FIREBASE_APP_ID: "1:217902041600:web:23a281f725d01d45"
+          FIREBASE_MEASUREMENT_ID: "G-S7D28K5ZT8"
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         name: Ship site
