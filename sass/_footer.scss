@@ -1,0 +1,88 @@
+footer {
+  background-image: url("/assets/footer.jpg");
+  color: white;
+  width: 100%;
+  min-height: 150px;
+  background-size: cover;
+  background-position: bottom;
+  padding: calc(1rem + 2vmin) 0;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+footer .logo {
+  text-align: left;
+}
+
+footer .logo img {
+  max-width: 10rem;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact p {
+  margin: 0;
+}
+
+.information-contact {
+  display: flex;
+  flex-direction: row;
+  gap: 1ch;
+  text-align: left;
+  align-items: center;
+}
+
+.information-contact img {
+  width: 2rem;
+}
+
+.sponsors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: calc(2rem + 5vmin) 0;
+  gap: calc(2rem + 3vmin);
+}
+
+.sponsors .sponsors-slogan {
+  font-size: var(--fs-h3);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.sponsors .sponsors-slogan span.green {
+  color: white;
+  background: var(--color-brand-green);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.sponsors .sponsors-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.container.sponsors img {
+  height: 4rem;
+}
+
+.information-contact a{
+  color: white;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+ 
+}

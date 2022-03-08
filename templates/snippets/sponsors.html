@@ -1,0 +1,19 @@
+<section class="container sponsors">
+  <div class="sponsors-slogan">
+    <span class="green">"connecting people</span><br />through sharing
+    knowledge"
+  </div>
+  <div class="sponsors-links">
+    {% for sponsor in config.extra.sponsors %}
+    <a
+      class="sponsor"
+      id="{{ sponsor.id }}"
+      href="{{ sponsor.url }}"
+      target="_blank"
+      rel="norefereer noopener"
+    >
+      <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" />
+    </a>
+    {% endfor %}
+  </div>
+</section>

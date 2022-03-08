@@ -1,0 +1,41 @@
+.definition p {
+  display: inline;
+  text-align: center;
+  font-size: 20px;
+}
+.name {
+  background-color: var(--color-brand-green);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px;
+}
+.definition {
+  text-align: center;
+}
+.questions {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  align-items: center;
+}
+.question-title {
+  color: var(--color-brand-green);
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+.imagen {
+  max-width: 13rem;
+}
+
+.values {
+  display: flex;
+  gap: 2rem;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+}

@@ -1,0 +1,46 @@
+# The URL the site will be built for
+base_url = "https://coreofscience.org"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = false
+
+[link_checker]
+# Skip link checking for external URLs that start with these prefixes
+skip_prefixes = [
+    "http://scienti.colciencias.gov.co:8081",
+]
+
+
+[extra]
+
+[[ extra.sponsors ]]
+id = "bios"
+url = "https://bios.co"
+name = "BIOS Manizales"
+logo = "/assets/sponsors/bios.svg"
+
+[[ extra.sponsors ]]
+id = "unal"
+url = "https://unal.edu.co"
+name = "Universidad Nacional de Colombia"
+logo = "/assets/sponsors/unal.svg"
+
+[[ extra.sponsors ]]
+id = "funlam"
+url = "https://www.funlam.edu.co/"
+name = "Universidad Católica Luiz Amigó"
+logo = "/assets/sponsors/funlam.svg"
+
+[[ extra.sponsors ]]
+id = "unad"
+url = "https://www.unad.edu.co/"
+name = "Universidad Nacional Abierta y a Distancia"
+logo = "/assets/sponsors/unad.svg"

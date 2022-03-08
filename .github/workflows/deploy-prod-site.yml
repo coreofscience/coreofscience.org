@@ -1,7 +1,7 @@
 name: Build and Deploy Prod Site
 
 on:
-  create:
+  push:
     tags:
       - v*
 
@@ -14,25 +14,30 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install apt dependency
-        run: sudo apt-get install libvips
-
-      - name: Use Node 12
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-
-      - name: Build and deploy
+      - name: Download zola
         run: |
-          npm ci
-          npm run deploy -- --token=${{ secrets.FIREBASE_TOKEN }} -P prod
+          wget https://github.com/getzola/zola/releases/download/v0.14.1/zola-v0.14.1-x86_64-unknown-linux-gnu.tar.gz
+          tar -xvf zola-v0.14.1-x86_64-unknown-linux-gnu.tar.gz
+
+      - name: Build
+        run: |
+          ./zola check
+          ./zola build
         env:
           CI: true
-          GATSBY_FIREBASE_API_KEY: ${{ secrets.FIREBASE_WEB_API_KEY_PROD }}
-          GATSBY_FIREBASE_AUTH_DOMAIN: "coreofscience.firebaseapp.com"
-          GATSBY_FIREBASE_DATABASE_URL: "https://coreofscience.firebaseio.com"
-          GATSBY_FIREBASE_PROJECT_ID: "coreofscience"
-          GATSBY_FIREBASE_STORAGE_BUCKET: "coreofscience.appspot.com"
-          GATSBY_FIREBASE_MESSAGING_SENDER_ID: "217902041600"
-          GATSBY_FIREBASE_APP_ID: "1:217902041600:web:23a281f725d01d45"
-          GATSBY_FIREBASE_MEASUREMENT_ID: "G-S7D28K5ZT8"
+          FIREBASE_API_KEY: ${{ secrets.FIREBASE_WEB_API_KEY_DEV }}
+          FIREBASE_AUTH_DOMAIN: "coreofscience-dev.firebaseapp.com"
+          FIREBASE_DATABASE_URL: "https://coreofscience-dev.firebaseio.com"
+          FIREBASE_PROJECT_ID: "coreofscience-dev"
+          FIREBASE_STORAGE_BUCKET: "coreofscience-dev.appspot.com"
+          FIREBASE_MESSAGING_SENDER_ID: "421154467745"
+          FIREBASE_APP_ID: "1:421154467745:web:d7dd5ed17243869ba765e0"
+          FIREBASE_MEASUREMENT_ID: "G-RN1WPXBDB2"
+
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        name: Ship site
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+          projectId: prod
+          channelId: live
