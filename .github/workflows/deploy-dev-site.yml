@@ -3,7 +3,7 @@ name: Build and Deploy Dev Site
 on:
   push:
     branches:
-      - redesign
+      - main
 
 jobs:
   build-and-deploy:
@@ -35,7 +35,7 @@ jobs:
           FIREBASE_MEASUREMENT_ID: "G-RN1WPXBDB2"
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
-        name: Ship dev site
+        name: Ship site
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
