@@ -6,6 +6,7 @@
   --color-brand-yellow: #ef9712;
   --color-brand-blue: #010d3c;
   --color-brand-green: #009c35;
+  --color-brand-green-light: #d4f1df;
   --fs-h1: clamp(1.464rem, 6.221vmin, 2.856rem);
   --fs-h2: clamp(1.331rem, 5.184vmin, 2.197rem);
   --fs-h3: clamp(1.21rem, 4.32vmin, 1.69rem);
@@ -87,4 +88,12 @@ h6 {
 
 small {
   font-size: var(--fs-small);
+}
+
+table {
+  width: 80%;
+  margin: auto;
+}
+tbody tr:nth-child(odd) {
+  background-color: var(--color-brand-green-light);
 }
