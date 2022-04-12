@@ -11,6 +11,7 @@ Support science and knowledge to make big changes. You can do it directly to our
 |                    |                      |
 | ------------------ | -------------------- |
 | **Bank name**      | BBVA                 |
+| **Account type**   | Savings account      |
 | **Country**        | Colombia             |
 | **SWIFT Code**     | BBVAESMM             |
 | **Account Number** | 00130537000200563744 |
