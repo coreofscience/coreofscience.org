@@ -8,11 +8,11 @@ Support science and knowledge to make big changes. You can do it directly to our
 <br/>
 <br/>
 
-|                    |                      |
-| ------------------ | -------------------- |
-| **Bank name**      | BBVA                 |
-| **Account type**   | Savings account      |
-| **Country**        | Colombia             |
-| **SWIFT Code**     | BBVAESMM             |
-| **Account Number** | 00130537000200563744 |
-| **NIT**            | 901172126-5          |
+|                    |                  |
+| ------------------ | ---------------- |
+| **Bank name**      | BBVA             |
+| **Account type**   | Savings account  |
+| **Country**        | Colombia         |
+| **SWIFT Code**     | BBVAESMM         |
+| **Account Number** | 0537000200563744 |
+| **NIT**            | 901172126-5      |
