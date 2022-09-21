@@ -1,0 +1,46 @@
+---
+export interface Props {
+	title?: string;
+	slogan?: string;
+}
+
+const { title = "Core of Science", slogan = "Connecting people through sharing knowledge" } = Astro.props;
+---
+
+<header>
+  <div class="container">
+    <a class="branding" href="/">
+      <img
+        class="branding-logo"
+        src="/assets/logo-white.png"
+        alt="Core of Science"
+        title="Core of Science"
+      />
+    </a>
+    <nav>
+      <ul>
+        <li>
+          <a href="/projects">Projects</a>
+        </li>
+        <li>
+          <a href="/about">About</a>
+        </li>
+        <li>
+          <a href="/people">People</a>
+        </li>
+        <li>
+          <a href="/dian">DIAN</a>
+        </li>
+        <li>
+          <a href="/donate">Donate</a>
+        </li>
+      </ul>
+    </nav>
+    <section class="title">
+      <h1>{title}</h1>
+      <span class="slogan">
+        {slogan}
+      </span>
+    </section>
+  </div>
+</header>

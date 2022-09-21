@@ -1,0 +1,69 @@
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero .slogan {
+  font-size: var(--fs-h3);
+  text-align: center;
+}
+
+.hero .mission > p {
+  text-align: center;
+}
+
+.projects .featured-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.projects {
+  background-color: #010e3c;
+  color: white;
+}
+
+.projects a {
+  color: hsl(280deg, 90%, 80%);
+}
+
+.projects a:visited {
+  color: hsl(270deg, 90%, 90%);
+}
+
+.projects h3 {
+  margin-bottom: 0.5rem;
+  padding: 0px;
+}
+
+.project .green-separator {
+  max-width: 45px;
+}
+
+.feature {
+  background: url("/assets/ring-pattern.jpg") no-repeat;
+  background-position: bottom right;
+  background-size: cover;
+}
+
+//events
+
+.hero,
+.events,
+.projects,
+.feature {
+  padding-top: 5vmin;
+  padding-bottom: 8vmin;
+}
+
+.projects h2 {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.projects h2 img {
+  height: 2em;
+}
