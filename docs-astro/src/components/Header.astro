@@ -37,9 +37,8 @@ const { title = "Core of Science", slogan = "Connecting people through sharing k
       </ul>
     </nav>
     <section class="title">
-      <h1>{title}</h1>
-      <span class="slogan">
-        {slogan}
+      <h1 set:html={title} />
+      <span class="slogan" set:html={slogan} />
       </span>
     </section>
   </div>

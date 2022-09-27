@@ -1,0 +1,32 @@
+---
+import Base from "./Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { marked } from 'marked';
+import insane from 'insane';
+
+type Props = MarkdownLayoutProps<{
+  // Define frontmatter props here
+  title: string;
+  description: string;
+}>;
+
+const { frontmatter } = Astro.props;
+const { title, description } = frontmatter;
+
+// This formats any potential markdown as html, and removes the parent tag
+const formattedTitle = insane(marked(title)).slice(3, -5);
+const formattedDescription = insane(marked(description)).slice(3, -5);
+const rawTitle = formattedTitle.replace(/<[^>]*>?/gm, '');
+---
+
+
+<Base title={rawTitle}>
+  <Header title={formattedTitle} slogan={formattedDescription} />
+  <main>
+    <div class="container">
+      <slot />
+    </div>
+  </main>
+  <Footer />
+</Base>

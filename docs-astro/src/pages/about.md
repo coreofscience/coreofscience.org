@@ -1,5 +1,5 @@
 ---
-layout: "../layouts/Layout.astro"
+layout: "../layouts/Markdown.astro"
 title: "About **us**"
 description: "get to know **us** better"
 ---
