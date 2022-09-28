@@ -1,10 +1,13 @@
 ---
 export interface Props {
-	title?: string;
-	slogan?: string;
+  title?: string;
+  slogan?: string;
 }
 
-const { title = "Core of Science", slogan = "Connecting people through sharing knowledge" } = Astro.props;
+const {
+  title = "Core of Science",
+  slogan = "Connecting people through sharing knowledge",
+} = Astro.props;
 ---
 
 <header>
@@ -37,9 +40,8 @@ const { title = "Core of Science", slogan = "Connecting people through sharing k
       </ul>
     </nav>
     <section class="title">
-      <h1 set:html={title} />
-      <span class="slogan" set:html={slogan} />
-      </span>
+      <h1 set:html={title}></h1>
+      <span class="slogan" set:html={slogan}></span>
     </section>
   </div>
 </header>

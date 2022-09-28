@@ -2,11 +2,11 @@
 import "../sass/style.scss";
 
 export interface Props {
-	title?: string;
+  title?: string;
 }
 
 const { title = "Core of Science" } = Astro.props;
-const rawTitle = title.replace(/<[^>]*>?/gm, '');
+const rawTitle = title.replace(/<[^>]*>?/gm, "");
 const gtag = import.meta.env.FIREBASE_MEASUREMENT_ID;
 ---
 
@@ -22,7 +22,7 @@ const gtag = import.meta.env.FIREBASE_MEASUREMENT_ID;
     <meta name="keywords" content="science, sharing, education, research" />
     <meta name="author" content="Core of Science, Corp." />
     <meta name="copyright" content="2021 Core of Science." />
-    <title>{ rawTitle }</title>
+    <title>{rawTitle}</title>
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
@@ -74,28 +74,22 @@ const gtag = import.meta.env.FIREBASE_MEASUREMENT_ID;
     />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-
-    {gtag && (
+  </head>{
+    gtag && (
+      <>
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-S7D28K5ZT8"
-        ></script>
+        />
         <script>
-          declare global {
-            interface Window { dataLayer: any[]; }
-            function gtag(...arguments: any[]): void;
-          }
-          window.dataLayer = window.dataLayer || [];
-          function gtag(...args: any[]) {
-            window.dataLayer.push(args);
-          }
-          gtag("js", new Date());
-
-          gtag("config", "{{ gtag }}");
+          window.dataLayer = window.dataLayer || []; function gtag(){" "}
+          {window.dataLayer.push(arguments)}
+          gtag("js", new Date()); gtag("config", "{{ gtag }}");
         </script>
-    )}
-  </head>
-  <body>
-      <slot />
-  </body>
+      </>
+    )
+  }
+
+
+  <slot />
 </html>

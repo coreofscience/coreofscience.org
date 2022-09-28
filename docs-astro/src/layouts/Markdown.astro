@@ -2,8 +2,9 @@
 import Base from "./Base.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { marked } from 'marked';
-import insane from 'insane';
+import Sponsors from "../components/Sponsors.astro";
+import { marked } from "marked";
+import type { MarkdownLayoutProps } from "astro";
 
 type Props = MarkdownLayoutProps<{
   // Define frontmatter props here
@@ -12,14 +13,16 @@ type Props = MarkdownLayoutProps<{
 }>;
 
 const { frontmatter } = Astro.props;
-const { title, description } = frontmatter;
+const {
+  title = "Core of **Science**",
+  description = "**connecting people** through sharing knowledge",
+} = frontmatter;
 
 // This formats any potential markdown as html, and removes the parent tag
-const formattedTitle = insane(marked(title)).slice(3, -5);
-const formattedDescription = insane(marked(description)).slice(3, -5);
-const rawTitle = formattedTitle.replace(/<[^>]*>?/gm, '');
+const formattedTitle = marked(title).slice(3, -5);
+const formattedDescription = marked(description).slice(3, -5);
+const rawTitle = formattedTitle.replace(/<[^>]*>?/gm, "");
 ---
-
 
 <Base title={rawTitle}>
   <Header title={formattedTitle} slogan={formattedDescription} />
@@ -27,6 +30,7 @@ const rawTitle = formattedTitle.replace(/<[^>]*>?/gm, '');
     <div class="container">
       <slot />
     </div>
+    <Sponsors />
   </main>
   <Footer />
 </Base>
