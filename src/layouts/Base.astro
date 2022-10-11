@@ -79,13 +79,14 @@ const gtag = import.meta.env.FIREBASE_MEASUREMENT_ID;
         <>
           <script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=G-S7D28K5ZT8"
+            src={`https://www.googletagmanager.com/gtag/js?id=${gtag}`}
           />
-          <script>
-            window.dataLayer = window.dataLayer || []; function gtag(){" "}
-            {window.dataLayer.push(arguments)}
-            gtag("js", new Date()); gtag("config", "{{ gtag }}");
-          </script>
+          <script set:html={`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${gtag}');
+          `} />
         </>
       )
     }
