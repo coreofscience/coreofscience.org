@@ -1,5 +1,5 @@
 ---
-layout: "../layouts/Layout.astro"
+layout: "../layouts/Markdown.astro"
 title: "**People**"
 description: "they make **this possible**"
 ---

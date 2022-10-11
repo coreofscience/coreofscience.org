@@ -1,0 +1,23 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import {marked} from "marked";
+
+const projects = await Astro.glob("../../pages/projects/*.md");
+---
+
+<Layout title="<strong>projects</strong>" slogan="know our <strong>projects</strong>">
+    <div class="container">
+        {
+          projects
+            .filter((project) => project.frontmatter.featured)
+            .map((project) => (
+              <div class="project">
+                <h3>{project.frontmatter.title}</h3>
+                <img class="green-separator" src="/assets/linea-08.png" />
+                <p set:html={marked(project.frontmatter.excerpt)} />
+                <a href={project.url}>Learn more</a>
+              </div>
+            ))
+        }
+      </div>
+</Layout>

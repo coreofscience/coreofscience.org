@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { marked } from "marked";
 
 const projects = await Astro.glob("../pages/projects/*.md");
 ---
@@ -8,7 +9,7 @@ const projects = await Astro.glob("../pages/projects/*.md");
   <div class="hero">
     <div class="container container-principal">
       <div class="slogan">
-        <strong> non-profit organization <br />dedicated to science</strong>
+        <strong>non-profit organization<br />dedicated to science</strong>
       </div>
       <br />
       <img class="green-separator" src="/assets/linea-08.png" />
@@ -32,7 +33,7 @@ const projects = await Astro.glob("../pages/projects/*.md");
               <div class="project">
                 <h3>{project.frontmatter.title}</h3>
                 <img class="green-separator" src="/assets/linea-08.png" />
-                <p>{project.frontmatter.excerpt}</p>
+                <p set:html={marked(project.frontmatter.excerpt)} />
                 <a href={project.url}>Learn more</a>
               </div>
             ))

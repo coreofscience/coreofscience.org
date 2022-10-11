@@ -1,5 +1,5 @@
 ---
-layout: "../layouts/Layout.astro"
+layout: "../layouts/Markdown.astro"
 title: "How to **donate**"
 description: "make a contribution"
 ---

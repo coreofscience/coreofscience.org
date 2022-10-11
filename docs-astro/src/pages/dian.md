@@ -1,5 +1,5 @@
 ---
-layout: "../layouts/Layout.astro"
+layout: "../layouts/Markdown.astro"
 title: "DIAN **Documentation**"
 description: "legally required financial information"
 ---
