@@ -15,7 +15,8 @@ jobs:
           node-version: 16
           cache: 'npm'
 
-      - run: |
+      - name: Build it
+        run: |
           npm ci
           npm run build
         env:
@@ -29,7 +30,8 @@ jobs:
           FIREBASE_APP_ID: "1:421154467745:web:d7dd5ed17243869ba765e0"
           FIREBASE_MEASUREMENT_ID: "G-RN1WPXBDB2"
 
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - name: Ship it
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
