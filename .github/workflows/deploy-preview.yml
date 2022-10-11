@@ -9,14 +9,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Download zola
-        run: |
-          wget https://github.com/getzola/zola/releases/download/v0.14.1/zola-v0.14.1-x86_64-unknown-linux-gnu.tar.gz
-          tar -xvf zola-v0.14.1-x86_64-unknown-linux-gnu.tar.gz
+      - name: Grab node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
 
       - run: |
-          ./zola check
-          ./zola build
+          npm ci
+          npm run build
         env:
           CI: true
           FIREBASE_API_KEY: ${{ secrets.FIREBASE_WEB_API_KEY_DEV }}
