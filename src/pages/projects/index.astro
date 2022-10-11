@@ -9,7 +9,6 @@ const projects = await Astro.glob("../../pages/projects/*.md");
     <div class="container">
         {
           projects
-            .filter((project) => project.frontmatter.featured)
             .map((project) => (
               <div class="project">
                 <h3>{project.frontmatter.title}</h3>
