@@ -1,7 +1,8 @@
-+++
-title = "**People**"
-description = "they make **this possible**"
-+++
+---
+layout: "../layouts/Markdown.astro"
+title: "**People**"
+description: "they make **this possible**"
+---
 
 ## SEBASTÍAN ROBLEDO
 

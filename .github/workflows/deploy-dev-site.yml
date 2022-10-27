@@ -9,20 +9,18 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+
+      - name: Grab node
+        uses: actions/setup-node@v3
         with:
-          persist-credentials: false
+          node-version: 16
+          cache: 'npm'
 
-      - name: Download zola
+      - name: Build it
         run: |
-          wget https://github.com/getzola/zola/releases/download/v0.14.1/zola-v0.14.1-x86_64-unknown-linux-gnu.tar.gz
-          tar -xvf zola-v0.14.1-x86_64-unknown-linux-gnu.tar.gz
-
-      - name: Build
-        run: |
-          ./zola check
-          ./zola build
+          npm ci
+          npm run build
         env:
           CI: true
           FIREBASE_API_KEY: ${{ secrets.FIREBASE_WEB_API_KEY_DEV }}

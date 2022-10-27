@@ -7,10 +7,12 @@ Dev preview site: [coreofscience-dev.web.app](https://coreofscience-dev.web.app)
 
 ## Development
 
-Get started by installing [zola] in your system, then start the development server using.
+Get started by installing `node` in your system via [nvm], then start the
+development server using. And then:
 
 ```console
-zola serve
+npm ci
+npm start
 ```
 
-[zola]: https://www.getzola.org/documentation/getting-started/installation/
+[nvm]: https://github.com/nvm-sh/nvm
