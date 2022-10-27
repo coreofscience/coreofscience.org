@@ -27,22 +27,22 @@ const sponsors = [
 ];
 ---
 
-<section class="container sponsors">
-  <div class="sponsors-slogan">
-    <span class="green">"connecting people</span><br />through sharing
-    knowledge"
+<section class="container flex flex-col items-center gap-4">
+  <div class="text-center text-lg leading-relaxed">
+    <span class="bg-green-800 text-white p-2 rounded-md"
+      >"connecting people</span
+    ><br />through sharing knowledge"
   </div>
-  <div class="sponsors-links">
+  <div class="flex flex-row flex-wrap gap-2">
     {
       sponsors.map((sponsor) => (
         <a
-          class="sponsor"
           id={sponsor.id}
           href={sponsor.url}
           target="_blank"
           rel="norefereer noopener"
         >
-          <img src={sponsor.logo} alt={sponsor.name} />
+          <img class="h-24" src={sponsor.logo} alt={sponsor.name} />
         </a>
       ))
     }

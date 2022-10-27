@@ -1,6 +1,4 @@
 ---
-import "../sass/style.scss";
-
 export interface Props {
   title?: string;
 }
@@ -91,7 +89,7 @@ const gtag = import.meta.env.FIREBASE_MEASUREMENT_ID;
       )
     }
   </head>
-  <body>
+  <body class="min-h-full w-full">
     <slot />
   </body>
 </html>
