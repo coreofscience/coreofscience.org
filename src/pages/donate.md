@@ -1,7 +1,8 @@
-+++
-title = "How to **donate**"
-description = "make a contribution"
-+++
+---
+layout: "../layouts/Markdown.astro"
+title: "How to **donate**"
+description: "make a contribution"
+---
 
 Support science and knowledge to make big changes. You can do it directly to our bank account:
 

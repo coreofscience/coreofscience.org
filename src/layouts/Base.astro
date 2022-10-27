@@ -1,3 +1,15 @@
+---
+import "../sass/style.scss";
+
+export interface Props {
+  title?: string;
+}
+
+const { title = "Core of Science" } = Astro.props;
+const rawTitle = title.replace(/<[^>]*>?/gm, "");
+const gtag = import.meta.env.FIREBASE_MEASUREMENT_ID;
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,7 +22,7 @@
     <meta name="keywords" content="science, sharing, education, research" />
     <meta name="author" content="Core of Science, Corp." />
     <meta name="copyright" content="2021 Core of Science." />
-    <title>Core of Science</title>
+    <title>{rawTitle}</title>
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
@@ -60,42 +72,26 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Oswald&family=Ubuntu:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link href="/style.css" rel="stylesheet" />
-
-    {% set gtag = get_env(name="FIREBASE_MEASUREMENT_ID", default="") %}
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-
-    {% if gtag %}
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-S7D28K5ZT8"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "{{ gtag }}");
-    </script>
-    {% endif %}
+    {
+      gtag && (
+        <>
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${gtag}`}
+          />
+          <script set:html={`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${gtag}');
+          `} />
+        </>
+      )
+    }
   </head>
-
   <body>
-    {% include "snippets/header.html" %}
-    <main id="content">
-      {% block content %}{% endblock %}
-      <!-- --- -->
-      {% include "snippets/sponsors.html" %}
-    </main>
-    {% include "snippets/footer.html" %}
-    <!-- --- -->
-    {% if config.mode == "Serve" %}
-    <script type="application/javascript">
-      console.log(`{{__tera_context}}`);
-    </script>
-    {% endif %}
+    <slot />
   </body>
 </html>
