@@ -52,14 +52,18 @@ nav ul a {
   text-decoration: none;
   text-transform: uppercase;
 }
-.tos-link {
-  height: 1em;
-  width: 3rem;
+
+.tos-link img {
+  height: 1.5em;
+}
+
+
+nav ul a.tos-link {
   display: flex;
   flex-direction: row;
   align-items: center;
-  
-  
+  gap: 0.5em;
+  text-transform: none;
 }
 
 header section.title {
