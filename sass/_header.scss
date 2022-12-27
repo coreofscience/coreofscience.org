@@ -52,6 +52,15 @@ nav ul a {
   text-decoration: none;
   text-transform: uppercase;
 }
+.tos-link {
+  height: 1em;
+  width: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+  
+}
 
 header section.title {
   align-items: center;
@@ -70,6 +79,7 @@ header h1 {
   margin: 0;
   text-transform: uppercase;
 }
+
 
 header section.title .slogan {
   background-color: var(--color-brand-green);
