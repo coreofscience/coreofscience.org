@@ -31,3 +31,5 @@ shell.nix
 .swp
 public
 .DS_Store
+_env.crash
+
