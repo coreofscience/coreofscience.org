@@ -1,9 +1,14 @@
-+++
-title = "Margaret"
-
-[extra]
-featured = true
-+++
+---
+layout: "../../layouts/Markdown.astro"
+title: "Margaret"
+featured: true
+excerpt: |
+  Margaret is an R package created with some students from Universidad
+  Católica Luis Amigó. This package extracts data from Minciencias web pages
+  (research groups and researchers). Next, margaret merges it with data from
+  Scimago, Publindex, and Google Scholar; finally, the merged data is
+  exported in a `xlsx` file.
+---
 
 Margaret is an R package created with some students from Universidad Católica
 Luis Amigó. This package extracts data from Minciencias web pages (research
@@ -11,7 +16,7 @@ groups and researchers). Next, margaret merges it with data from Scimago,
 Publindex, and Google Scholar; finally, the merged data is exported in a `xlsx`
 file.
 
-<!-- more -->
+<span id="continue-reading"></span>
 
 [coreofscience/margaret](https://github.com/coreofscience/margaret)
 

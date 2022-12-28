@@ -1,0 +1,24 @@
+{
+  "name": "@example/basics",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^0.11.1",
+    "astro": "^1.2.8",
+    "marked": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/marked": "^4.0.7",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.5.5",
+    "sass": "^1.54.9"
+  }
+}

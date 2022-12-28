@@ -1,7 +1,8 @@
-+++
-title = "DIAN **Documentation**"
-description = "legally required financial information"
-+++
+---
+layout: "../layouts/Markdown.astro"
+title: "DIAN **Documentation**"
+description: "legally required financial information"
+---
 
 Here are some legally required documents, this information is here for Colombia's tax office DIAN:
 

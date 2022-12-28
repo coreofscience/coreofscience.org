@@ -1,35 +1,22 @@
-target
-.idea/
-test_site/public
-test_site_i18n/public
-docs/public
-docs/out
+# build output
+dist/
+.output/
 
-small-blog
-medium-blog
-big-blog
-huge-blog
-extra-huge-blog
-small-kb
-medium-kb
-huge-kb
+# dependencies
+node_modules/
 
-current.bench
-now.bench
-*.zst
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# snapcraft artifacts
-snap/.snapcraft
-parts
-prime
-stage
 
-# nixos dependencies snippet
-shell.nix
-# vim temporary files
-**/.*.sw*
-.swp
-public
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
 .DS_Store
 _env.crash
 

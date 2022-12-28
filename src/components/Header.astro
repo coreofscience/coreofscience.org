@@ -1,3 +1,15 @@
+---
+export interface Props {
+  title?: string;
+  slogan?: string;
+}
+
+const {
+  title = "Core of Science",
+  slogan = "Connecting people through sharing knowledge",
+} = Astro.props;
+---
+
 <header>
   <div class="container">
     <a class="branding" href="/">
@@ -33,17 +45,8 @@
       </ul>
     </nav>
     <section class="title">
-      <h1>
-        {% if section %} {{ section.title | markdown(inline=true) | safe }} {%
-        else %} {{ page.title | markdown(inline=true) | safe }} {% endif %}
-      </h1>
-      {% set slogan = "**connecting people** through sharing knowledge" %}
-      <span class="slogan">
-        {% if section and section.description %} {{ section.description |
-        markdown(inline=true) | safe }} {% elif page and page.description %} {{
-        page.description | markdown(inline=true) | safe }} {% else %} {{ slogan
-        | markdown(inline=true) | safe }} {% endif %}
-      </span>
+      <h1 set:html={title}></h1>
+      <span class="slogan" set:html={slogan}></span>
     </section>
   </div>
 </header>
