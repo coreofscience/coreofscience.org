@@ -53,6 +53,19 @@ nav ul a {
   text-transform: uppercase;
 }
 
+.tos-link img {
+  height: 1.5em;
+}
+
+
+nav ul a.tos-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  text-transform: none;
+}
+
 header section.title {
   align-items: center;
   display: flex;
@@ -71,6 +84,10 @@ header h1 {
   text-transform: uppercase;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> @{-1}
 header section.title .slogan {
   background-color: var(--color-brand-green);
   border-radius: 10px;
