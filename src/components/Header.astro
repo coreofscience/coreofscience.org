@@ -12,38 +12,43 @@ const {
 
 <header class="bg-green-900 text-white w-full">
   <div class="container">
-    <a class="branding" href="/">
-      <img
-        class="max-w-sm"
-        src="/assets/logo-white.png"
-        alt="Core of Science"
-        title="Core of Science"
-      />
-    </a>
-    <nav>
-      <ul>
-        <li>
-          <a href="/projects">Projects</a>
-        </li>
-        <li>
-          <a href="/about">About</a>
-        </li>
-        <li>
-          <a href="/people">People</a>
-        </li>
-        <li>
-          <a href="/dian">DIAN</a>
-        </li>
-        <li>
-          <a href="/donate">Donate</a>
-        </li>
-        <li>
-          <a class="tos-link" href="https://tos.coreofscience.org/">
-            <img src="/assets/logo-tos.svg" /> ToS
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <div class="flex justify-between items-center">
+      <a class="branding" href="/">
+        <img
+          class="max-w-sm"
+          src="/assets/logo-white.png"
+          alt="Core of Science"
+          title="Core of Science"
+        />
+      </a>
+      <nav>
+        <ul class="flex gap-2">
+          <li>
+            <a href="/projects">Projects</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+          <li>
+            <a href="/people">People</a>
+          </li>
+          <li>
+            <a href="/dian">DIAN</a>
+          </li>
+          <li>
+            <a href="/donate">Donate</a>
+          </li>
+          <li>
+            <a
+              class="flex gap-1 justify-center"
+              href="https://tos.coreofscience.org/"
+            >
+              <img class="h-6" src="/assets/logo-tos.svg" /> ToS
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <section class="title">
       <h1 set:html={title}></h1>
       <span class="slogan" set:html={slogan}></span>
