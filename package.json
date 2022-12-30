@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "shipit": "git tag v$(date +%y.%m.%d.%H.%M) && git push --tags",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
