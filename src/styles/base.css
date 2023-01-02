@@ -3,7 +3,43 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-brand-yellow: 239 151 18;
+    --color-brand-green: 0 156 53;
+    --color-brand-blue: 1 13 60;
+  }
+
   html {
-    font-size: 14pt;
+    font-size: 16px;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+@layer components {
+  html {
+    line-height: 1.4;
+  }
+
+  .container {
+    max-width: 87ch;
+  }
+
+  .logo-after::after {
+    background-color: rgb(var(--color-brand-yellow));
+    background-image: url("/assets/logo.png");
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    background-size: 3rem;
+    border-radius: 2rem;
+    bottom: -2rem;
+    box-shadow: 0 0 5px gray;
+    content: "";
+    display: block;
+    height: 4rem;
+    left: calc(50% - 2rem);
+    position: absolute;
+    width: 4rem;
   }
 }

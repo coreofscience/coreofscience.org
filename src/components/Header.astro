@@ -10,35 +10,35 @@ const {
 } = Astro.props;
 ---
 
-<header class="bg-green-900 text-white w-full">
-  <div class="container">
-    <div class="flex justify-between items-center">
-      <a class="branding" href="/">
+<header class="bg-gradient-to-b from-brand-blue to-brand-green text-white w-full mb-16 relative logo-after">
+  <div class="container p-4 m-auto flex gap-2 flex-col">
+    <div class="flex justify-between flex-wrap items-center">
+      <a href="/">
         <img
-          class="max-w-sm"
+          class="max-w-[10rem]"
           src="/assets/logo-white.png"
           alt="Core of Science"
           title="Core of Science"
         />
       </a>
       <nav>
-        <ul class="flex gap-2">
-          <li>
+        <ul class="flex flex-wrap justify-center">
+          <li class="px-2 py-1 uppercase rounded-md hover:bg-slate-100/70 hover:text-brand-blue">
             <a href="/projects">Projects</a>
           </li>
-          <li>
+          <li class="px-2 py-1 uppercase rounded-md hover:bg-slate-100/70 hover:text-brand-blue">
             <a href="/about">About</a>
           </li>
-          <li>
+          <li class="px-2 py-1 uppercase rounded-md hover:bg-slate-100/70 hover:text-brand-blue">
             <a href="/people">People</a>
           </li>
-          <li>
+          <li class="px-2 py-1 uppercase rounded-md hover:bg-slate-100/70 hover:text-brand-blue">
             <a href="/dian">DIAN</a>
           </li>
-          <li>
+          <li class="px-2 py-1 uppercase rounded-md hover:bg-slate-100/70 hover:text-brand-blue">
             <a href="/donate">Donate</a>
           </li>
-          <li>
+          <li class="px-2 py-1 rounded-md hover:bg-slate-100/70 hover:text-brand-blue">
             <a
               class="flex gap-1 justify-center"
               href="https://tos.coreofscience.org/"
@@ -49,9 +49,9 @@ const {
         </ul>
       </nav>
     </div>
-    <section class="title">
-      <h1 set:html={title}></h1>
-      <span class="slogan" set:html={slogan}></span>
+    <section class="flex flex-col gap-2 items-center justify-center text-center p-14">
+      <h1 set:html={title} class="uppercase text-6xl font-normal"></h1>
+      <span class="bg-brand-green rounded-lg px-4 py-2"set:html={slogan}></span>
     </section>
   </div>
 </header>

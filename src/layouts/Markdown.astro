@@ -27,7 +27,7 @@ const rawTitle = formattedTitle.replace(/<[^>]*>?/gm, "");
 <Base title={rawTitle}>
   <Header title={formattedTitle} slogan={formattedDescription} />
   <main>
-    <div class="container">
+    <div class="container m-auto">
       <slot />
     </div>
     <Sponsors />
