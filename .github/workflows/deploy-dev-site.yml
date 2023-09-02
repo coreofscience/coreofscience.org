@@ -15,7 +15,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: 'npm'
+          cache: "npm"
 
       - name: Build it
         run: |
@@ -36,6 +36,6 @@ jobs:
         name: Ship site
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_DEV_SERVICE_ACCOUNT }}"
           projectId: dev
           channelId: live
