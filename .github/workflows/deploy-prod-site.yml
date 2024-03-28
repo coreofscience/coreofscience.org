@@ -14,7 +14,7 @@ jobs:
       - name: Grab node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 'lts/iron'
           cache: 'npm'
 
       - name: Build it
