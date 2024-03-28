@@ -4,22 +4,32 @@ title: "**People**"
 description: "they make **this possible**"
 ---
 
+## GUILLERMO ROJAS-QUICENO
+
+Guillermo Rojas Quiceno is an electrical engineer and doctor in education
+sciences, with experience in topics of education, human sciences, suicide, good
+living and creativity. He is the author of several books and academic articles,
+among them “Happiness and Good Living Index”, “Hostages of Fear” and “Creative
+Processes in Qualitative Research II”. He currently works as a teacher and
+researcher at the University of Cauca, Colombia, where he has directed and
+participated in various undergraduate and graduate projects. He has also been a
+jury and peer evaluator of research works in the national and international
+scope. His interest focuses on the generation of knowledge and proposals that
+contribute to human and social development, from a critical and transformative
+perspective.
+
+Guillermo Rojas Quiceno is the director of Core of Science.
+
 ## SEBASTÍAN ROBLEDO
 
-Sebastian Robledo is an Assistant Professor of Marketing at Universidad Católica
-Luis Amigó, Colombia.
+Sebastian Robledo is an Assistant Professor of Marketing at Universidad Nacional
+de colombia.
 
 He received his PhD in engineering from the Universidad Nacional de Colombia,
 Colombia.
 
-His research focuses on entrepreneurial marketing and networking as a driver of
-word of mouth. He is conducting a post-doctoral study in scientometrics at
-Centro de Bioinformática y Biología Computacional (BIOS).
-
-He is the director of Core of Science, a spin-off development from his doctoral
-research.
-
-### Google Scholar
+He is the scientific director of Core of Science, a spin-off development from
+his doctoral research.
 
 [Google Scholar](https://scholar.google.com/citations?user=RGUTAfEAAAAJ&hl=en)
 [Cvlac](http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001430153)
