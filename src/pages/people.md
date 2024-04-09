@@ -20,32 +20,6 @@ perspective.
 
 Guillermo Rojas Quiceno is the director of Core of Science.
 
-## SEBASTÍAN ROBLEDO
-
-Sebastian Robledo is an Assistant Professor of Marketing at Universidad Nacional
-de colombia.
-
-He received his PhD in engineering from the Universidad Nacional de Colombia,
-Colombia.
-
-He is the scientific director of Core of Science, a spin-off development from
-his doctoral research.
-
-[Google Scholar](https://scholar.google.com/citations?user=RGUTAfEAAAAJ&hl=en)
-[Cvlac](http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001430153)
-
-## MARTHA ZULUAGA
-
-Martha Zuluaga has a Bachelor's Degree in Biology and Chemistry, a Master's
-Degree in Chemistry, and a Ph.D. in Biomedical Sciences.
-
-Her main research area is metabolomics, which she has applied in human exposure
-to pesticides, bioprospecting studies in the cosmetic and food industry, and
-Chemoinformatics. She is currently a professor of Chemistry and Chemometrics.
-
-[Google Scholar](https://scholar.google.com/citations?user=0DQG-40AAAAJ&hl=en)
-[Cvlac](http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001245368)
-
 ## OSCAR ARBELÁEZ
 
 Oscar Arbeláez is a Computational Physicist and Full Stack software developer.
