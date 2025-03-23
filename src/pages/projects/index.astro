@@ -1,22 +1,31 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import {marked} from "marked";
+import { marked } from "marked";
+import type { MarkdownInstance } from "astro";
+import type { ProjectFrontMatter } from "../../types/project";
 
-const projects = await Astro.glob("../../pages/projects/*.md");
+const projects = Object.values(
+  import.meta.glob<MarkdownInstance<ProjectFrontMatter>>(
+    "../../pages/projects/*.md",
+    { eager: true },
+  ),
+);
 ---
 
-<Layout title="<strong>projects</strong>" slogan="know our <strong>projects</strong>">
-    <div class="container">
-        {
-          projects
-            .map((project) => (
-              <div class="project">
-                <h3>{project.frontmatter.title}</h3>
-                <img class="green-separator" src="/assets/linea-08.png" />
-                <p set:html={marked(project.frontmatter.excerpt)} />
-                <a href={project.url}>Learn more</a>
-              </div>
-            ))
-        }
-      </div>
+<Layout
+  title="<strong>projects</strong>"
+  slogan="know our <strong>projects</strong>"
+>
+  <div class="container">
+    {
+      projects.map((project) => (
+        <div class="project">
+          <h3>{project.frontmatter.title}</h3>
+          <img class="green-separator" src="/assets/linea-08.png" />
+          <p set:html={marked(project.frontmatter.excerpt)} />
+          <a href={project.url}>Learn more</a>
+        </div>
+      ))
+    }
+  </div>
 </Layout>
