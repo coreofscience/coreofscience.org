@@ -1,8 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { marked } from "marked";
+import type { MarkdownInstance } from "astro";
+import type { ProjectFrontMatter } from "../types/project";
 
-const projects = await Astro.glob("../pages/projects/*.md");
+const projects = Object.values(
+  import.meta.glob<MarkdownInstance<ProjectFrontMatter>>(
+    "../pages/projects/*.md",
+    { eager: true },
+  ),
+);
 ---
 
 <Layout>
