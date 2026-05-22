@@ -12,13 +12,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.2.1",
-    "astro": "^5.5.4",
-    "marked": "^12.0.1"
+    "@astrojs/mdx": "^5.0.6",
+    "astro": "^6.3.7",
+    "marked": "^18.0.4"
   },
   "devDependencies": {
-    "prettier": "^3.2.5",
-    "prettier-plugin-astro": "^0.13.0",
-    "sass": "^1.72.0"
+    "prettier": "^3.8.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "sass": "^1.100.0"
   }
 }
